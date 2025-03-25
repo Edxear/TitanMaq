@@ -498,6 +498,42 @@ footer {
 
 .productos-grid {
   display: grid;
+  grid-template-columns: 1fr; /* Una columna por defecto */
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Para pantallas más grandes (computadoras) */
+@media (min-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+  }
+}
+
+.producto {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.imagenc {
+  width: 100%;
+  height: auto;
+}
+
+.h2-productos {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/* .contenedor-productos {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.productos-grid {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 20px;
@@ -523,11 +559,68 @@ footer {
   text-align: center;
   margin-bottom: 5px;
   font-size: 20px;
-}
+} */
 
 /* INDUSTRIAS */
 
 .h2-industrias {
+  text-align: center;
+  font-size: 30px;
+}
+
+.parrafo-industrias {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.contenedor-industrias {
+  display: flex;
+  flex-direction: column; /* Para que en móviles sea en columna */
+  align-items: center;
+}
+
+/* Contenedor de imágenes en fila para pantallas grandes */
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias líneas si es necesario */
+  justify-content: center;
+  gap: 10px;
+  margin: 5px;
+}
+
+/* Hacer que las imágenes sean más flexibles y responsivas */
+div img {
+  width: 100%;
+  max-width: 180px; /* Para evitar que sean demasiado grandes */
+  margin-top: 10px;
+  border: 3px solid black;
+}
+
+/* Ajustar lista para que no desborde en móviles */
+.lista-industrias {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .contenedor-imagenes {
+    flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+    align-items: center;
+  }
+
+  div img {
+    width: 80%; /* Reducir el tamaño de las imágenes en móviles */
+    max-width: 150px;
+  }
+}
+
+
+/* .h2-industrias {
   text-align: center;
   font-size: 30px;
 }
@@ -561,19 +654,25 @@ div img {
   width: 180px;
   margin-top: 10px;
   border: 3px solid black;
-}
+} */
 
 
 
 /* SERVICIOS */
 
-
 .contenedor-servicios {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
   gap: 30px;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .contenedor-servicios {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
 }
 
 .tarjeta {
@@ -612,40 +711,43 @@ div img {
   background-color: #e6b800;
 }
 
-@media (max-width: 768px) {
-  .contenedorServicios {
-    grid-template-columns: 1fr;
-  }
-}
-
-
 /* CONTACTO */
 /* el Form ya toma las propiedades del anterior. */
 
-.container{
+.container {
   max-width: 1000px;
   background: rgb(255, 255, 255);
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
-  border:  1px black;
+  border: 1px solid black; /* Corregido para que el borde sea visible */
+  width: 100%; /* Asegura que sea responsivo */
+  margin: 0 auto;
 }
 
-.accordion  {
-  max-width: 1000px; /* Evita que sea demasiado grande */
-  
+.accordion {
+  min-height: 50px;
+  max-width: 100%; /* Ajustado para ser responsivo */
 }
 
-.accordion-item {
-  min-height: 50px; /* Ajusta según el diseño */
-  min-width: 1000px;
+.accordion-body, .accordion-item {
+  min-height: 50px;
+  width: 100%; /* Evita que se desborde en pantallas pequeñas */
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto auto;
+  grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+  grid-template-rows: auto;
   gap: 20px;
   max-width: 1000px;
   width: 90%;
+  margin: 0 auto;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
 }
 
 .grid-item {
@@ -668,8 +770,6 @@ div img {
 }
 
 .button {
-  flex-direction: column;
-  display: flex;
   background: #ffcc00;
   color: black;
   padding: 10px;
@@ -680,4 +780,6 @@ div img {
   display: inline-block;
   width: fit-content;
 }
+
+
 
