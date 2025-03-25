@@ -57,14 +57,14 @@ main {
   margin: 5px;
   border: none;
   padding: none;
-  width: 15%; /* Reduce el tamaño del logo en el nav */
+  width: 15%; 
   height: auto;
-  max-width: 120px; /* Limita el tamaño máximo */
+  max-width: 120px; 
 }
 
 @media (max-width: 768px) {
   .logo {
-    width: 30%; /* Ajusta el tamaño en pantallas pequeñas */
+    width: 30%; 
     max-width: 80px;
   }
 }
@@ -346,8 +346,6 @@ h3 {
 .imagenP {
   width: 100%;
   height: auto;
-  /* margin: 0px auto 0px auto; */
-  /* Separación del header */
 }
 
 /* Estilos del formulario */
@@ -498,7 +496,7 @@ footer {
 
 .productos-grid {
   display: grid;
-  grid-template-columns: 1fr; /* Una columna por defecto */
+  grid-template-columns: 1fr; 
   gap: 20px;
   margin-top: 20px;
 }
@@ -506,7 +504,7 @@ footer {
 /* Para pantallas más grandes (computadoras) */
 @media (min-width: 768px) {
   .productos-grid {
-    grid-template-columns: repeat(3, 1fr); /* Tres columnas en pantallas grandes */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
@@ -526,40 +524,6 @@ footer {
   font-size: 30px;
 }
 
-
-/* .contenedor-productos {
-  margin-bottom: 20px;
-  display: block;
-}
-
-.productos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.producto {
-  padding: 15px;
-  text-align: center;
-  border: 2px solid black;
-}
-
-.imagenc {
-  width: 100%;
-  height: auto;
-}
-
-.h2-productos {
-  text-align: center;
-  font-size: 30px;
-}
-
-.parrafo-productos {
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 20px;
-} */
 
 /* INDUSTRIAS */
 
@@ -583,7 +547,7 @@ footer {
 /* Contenedor de imágenes en fila para pantallas grandes */
 .contenedor-imagenes {
   display: flex;
-  flex-wrap: wrap; /* Permite que las imágenes se ajusten en varias líneas si es necesario */
+  flex-wrap: wrap; 
   justify-content: center;
   gap: 10px;
   margin: 5px;
@@ -592,7 +556,7 @@ footer {
 /* Hacer que las imágenes sean más flexibles y responsivas */
 div img {
   width: 100%;
-  max-width: 180px; /* Para evitar que sean demasiado grandes */
+  max-width: 180px; 
   margin-top: 10px;
   border: 3px solid black;
 }
@@ -609,53 +573,15 @@ div img {
 /* Diseño responsivo para dispositivos móviles */
 @media (max-width: 768px) {
   .contenedor-imagenes {
-    flex-direction: column; /* Cambia a una columna en pantallas pequeñas */
+    flex-direction: column; 
     align-items: center;
   }
 
   div img {
-    width: 80%; /* Reducir el tamaño de las imágenes en móviles */
+    width: 80%; 
     max-width: 150px;
   }
 }
-
-
-/* .h2-industrias {
-  text-align: center;
-  font-size: 30px;
-}
-
-.parrafo-industrias {
-  text-align: center;
-  margin-bottom: 5px;
-  font-size: 20px;
-}
-
-.contenedor-industrias {
-  display: block;
-  flex-direction: row;
-}
-
-.contenedor-imagenes {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 5px 5px 5px 5px;
-}
-
-.lista-industrias {
-  background-color: rgb(255, 255, 255);
-  width: 100%;
-  text-align: center;
-  margin: 5px 5px 5px 5px;
-}
-
-div img {
-  width: 180px;
-  margin-top: 10px;
-  border: 3px solid black;
-} */
-
 
 
 /* SERVICIOS */
@@ -718,8 +644,8 @@ div img {
   max-width: 1000px;
   background: rgb(255, 255, 255);
   box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
-  border: 1px solid black; /* Corregido para que el borde sea visible */
-  width: 100%; /* Asegura que sea responsivo */
+  border: 1px solid black; 
+  width: 100%; 
   margin: 0 auto;
 }
 
