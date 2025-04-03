@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
@@ -7,9 +7,8 @@
 
 
 
-/* index */
-
-/* Estilos generales */
+/* index 
+ Estilos generales */
 body {
   font-family: Arial, sans-serif;
   background-color: #ffffff;
@@ -21,10 +20,8 @@ body {
   margin: 0;
   text-align: center;
   padding-top: 80px;
-  /* Espacio para el header */
   padding-bottom: 80px;
-  /* Espacio para el footer */
-}
+   }
 
 h1{
   margin: 0;
@@ -48,10 +45,10 @@ h3 {
 
 main {
   flex: 1;
-  /* para empujar el footer por tener poco contenido */
-}
+} 
 
 /* navegador */
+
 
 .logo {
   margin: 5px;
@@ -67,7 +64,7 @@ main {
     width: 30%; 
     max-width: 80px;
   }
-}
+}*/
 
 header {
   background-color: #000000;
@@ -112,7 +109,8 @@ a {
 }
 
 /* Integración de Bootstrap */
-.container {
+
+ .container {
   max-width: 1200px;
   margin: auto;
 }
@@ -122,12 +120,12 @@ a {
 }
 
 .navbar-brand img {
-  max-height: 40px; /* Reduce el tamaño del logo en el navbar */
+  max-height: 40px;  
 }
 
 @media (max-width: 768px) {
   .navbar-brand img {
-    max-height: 30px; /* Reduce aún más el tamaño en móviles */
+    max-height: 30px;
   }
 }
 
@@ -156,7 +154,7 @@ a {
 /* contenedor de productos */
 
 /* Contenedor principal para las columnas */
-.productos-container {
+ .productos-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -166,7 +164,7 @@ a {
 }
 
 .productos-interes {
-  flex: 1 1 20%; /* Se ajusta al 48% para que entren dos productos por fila */
+  flex: 1 1 20%; 
   text-align: center;
   border: 1px solid black;
   padding: 10px;
@@ -196,40 +194,34 @@ a {
   }
   
   .productos-interes {
-    flex: 1 1 100%; /* Ocupa toda la fila en móviles */
+    flex: 1 1 100%; 
   }
-}
+} */
 
 /* lista de pie debajo de PRODUCTOS */
 
 .columnas {
   display: flex;
   justify-content: center;
-  /* Centra las columnas horizontalmente */
   align-items: stretch;
-  /* Alinea las columnas a la misma altura */
   max-width: 1100px;
   margin: 20px auto;
   gap: 20px;
-  /* Espaciado entre columnas */
   width: 100%;
-  /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+ 
 }
 
 .columna {
   background: rgb(0, 0, 0);
   padding: 15px;
-  /* Más espacio interno */
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
   color: rgb(255, 255, 255);
   flex-grow: 1;
-  /* Asegura que todas las columnas crezcan por igual */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* Asegura que el contenido se distribuya dentro de cada columna */
 }
 
 .columna h1 {
@@ -237,7 +229,6 @@ a {
   margin-bottom: 12px;
   color: rgb(255, 255, 255);
   text-align: center;
-  /* Alinea el texto de los encabezados */
 }
 
 .columna ul {
@@ -251,7 +242,6 @@ a {
   color: white;
 }
 
-/* Estilo para hipervínculos */
 .columna a {
   color: #ffcc00;
   font-weight: bold;
@@ -262,7 +252,6 @@ a {
   text-decoration: underline;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .columnas {
     flex-direction: column;
@@ -274,9 +263,9 @@ a {
     max-width: 85%;
     padding: 15px;
   }
-}
+} */
 
-
+/* hasta aca llegue sas /*
 
 /* pie de pag */
 footer {
@@ -590,14 +579,13 @@ div img {
   width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
+  grid-template-columns: 1fr 1fr; 
   gap: 30px;
 }
 
-/* Diseño responsivo para dispositivos móviles */
 @media (max-width: 768px) {
   .contenedor-servicios {
-    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+    grid-template-columns: 1fr; 
   }
 }
 
@@ -651,17 +639,17 @@ div img {
 
 .accordion {
   min-height: 50px;
-  max-width: 100%; /* Ajustado para ser responsivo */
+  max-width: 100%; 
 }
 
 .accordion-body, .accordion-item {
   min-height: 50px;
-  width: 100%; /* Evita que se desborde en pantallas pequeñas */
+  width: 100%; 
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+  grid-template-columns: 1fr 1fr; 
   grid-template-rows: auto;
   gap: 20px;
   max-width: 1000px;
@@ -669,10 +657,10 @@ div img {
   margin: 0 auto;
 }
 
-/* Diseño responsivo para dispositivos móviles */
+
 @media (max-width: 768px) {
   .grid-container {
-    grid-template-columns: 1fr; /* Una sola columna en móviles */
+    grid-template-columns: 1fr; 
   }
 }
 
