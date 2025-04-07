@@ -15,44 +15,47 @@
 <body>
 
     <header>
-        <nav class="navbar border-bottom border-body" data-bs-theme="dark" fixed-top">
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <img src="./IMG/TITANMAQ (1).png" alt="Bootstrap" width="30" height="38">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-                    aria-labelledby="offcanvasNavbarLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="./index.html">Inicio</a>
-                                <a class="nav-link active" aria-current="page" href="./views/piezas.html">Piezas</a>
-                                <a class="nav-link active" aria-current="page"
-                                    href="./views/productos.html">Productos</a>
-                                <a class="nav-link active" aria-current="page"
-                                    href="./views/industrias.html">Industrias</a>
-                                <a class="nav-link active" aria-current="page"
-                                    href="./views/servicios.html">Servicios</a>
-                                <a class="nav-link active" aria-current="page"
-                                    href="./views/contacto.html">Contacto</a>
-                            </li>
-                            
-                            <form class="d-flex mt-3" role="search">
-                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                                <button class="btn btn-outline-success" type="submit">Buscar</button>
-                            </form>
-                    </div>
-                </div>
+              <a class="navbar-brand" href="#">
+                <img src="./IMG/TITANMAQ (1).png" alt="Bootstrap" width="40" height="40">
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item"><a class="nav-link active" href="./index.html">Inicio</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./views/piezas.html">Piezas</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./views/productos.html">Productos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./views/industrias.html">Industrias</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./views/servicios.html">Servicios</a></li>
+                  <li class="nav-item"><a class="nav-link" href="./views/contacto.html">Contacto</a></li>
+                  
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Menú
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="./index.html">Inicio</a></li>
+                      <li><a class="dropdown-item" href="./views/piezas.html">Piezas</a></li>
+                      <li><a class="dropdown-item" href="./views/productos.html">Productos</a></li>
+                      <li><a class="dropdown-item" href="./views/industrias.html">Industrias</a></li>
+                      <li><a class="dropdown-item" href="./views/servicios.html">Servicios</a></li>
+                      <li><a class="dropdown-item" href="./views/contacto.html">Contacto</a></li>
+                    </ul>
+                  </li>
+                </ul>
+                
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+              </div>
             </div>
-        </nav>
+          </nav>
     </header>
 
     <section>
@@ -62,84 +65,119 @@
     <video src="./VIDEO/video.mp4" controls>Video ilustrativo</video>
 </section> -->
 
-    <h2>Productos de interés</h2>
+    <h2 class="mt-3">Productos de interés</h2>
 
     <main>
-
-        <div class="productos-container">
-            <div class="productos-interes">
-                <img class="imagenc" src="./IMG/imagen2.jpeg" alt="">
-                <h3>Cargadores de cadenas compactos 239D3</h3>
-                <p>
-                    Potencia bruta: SAE J1995<br>
-                    50.1 kW<br>
-                    Capacidades nominales de operación: 35% de carga límite de equilibrio<br>
-                    695 kg<br>
-                    Peso en orden de trabajo<br>
-                    3372 kg<br>
-                    Precio<br>
-                    Contactar al distribuidor por Precio y Disponibilidad
-                </p>
-            </div>
-
-            <div class="productos-interes">
-                <img class="imagenc" src="./IMG/imagen3.jpeg" alt="">
-                <h3>Cargadores de cadenas compactos 249D3</h3>
-                <p>
-                    Potencia bruta: SAE J1995<br>
-                    50.1 kW<br>
-                    Capacidades nominales de operación: 35% de carga límite de equilibrio<br>
-                    790 kg<br>
-                    Peso en orden de trabajo<br>
-                    3552 kg<br>
-                    Precio<br>
-                    Contactar al distribuidor por Precio y Disponibilidad
-                </p>
-            </div>
-
-            <div class="productos-interes">
-                <img class="imagenc" src="./IMG/imagen4.jpeg" alt="">
-                <h3>Cargadores de cadenas compactos 259D3</h3>
-                <p>
-                    Potencia bruta: SAE J1995<br>
-                    55.4 kW<br>
-                    Capacidades nominales de operación: 35% de carga límite de equilibrio<br>
-                    915 kg<br>
-                    Peso en orden de trabajo<br>
-                    4076 kg<br>
-                    Precio<br>
-                    Contactar al distribuidor por Precio y Disponibilidad
-                </p>
-            </div>
-        </div>
-        <br>
-
-        <section class="lista">
-            <div class="columnas">
-                <div class="columna">
-                    <h3>Servicios y respaldo</h3>
-                    <ul type="square">
-                        <li><a href="./views/servicios.html">Tecnología</a></li>
-                        <li><a href="./views/servicios.html">JOB SITE SOLUTIONS</a></li>
-                    </ul>
+       
+        <div class="container-fluid my-4">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+              
+              <!-- Tarjeta 1 -->
+              <div class="col-lg-4">
+                <div class="card h-100 bg-dark text-light" >
+                  <img src="./IMG/imagen2.jpeg" class="card-img-top" alt="Cargadores de cadenas compactos 239D3">
+                  <div class="card-body">
+                    <h5 class="card-title text-white">Cargadores de cadenas compactos 239D3</h5>
+                    <p class="card-text">
+                      Potencia bruta: SAE J1995<br>
+                      50.1 kW<br>
+                      Capacidades nominales de operación: 35% de carga límite de equilibrio<br>
+                      695 kg<br>
+                      Peso en orden de trabajo<br>
+                      3372 kg<br>
+                      Precio<br>
+                      Contactar al distribuidor por Precio y Disponibilidad
+                    </p>
+                  </div>
                 </div>
-                <div class="columna">
-                    <h3>Comprar ahora</h3>
-                    <ul type="square">
-                        <li><a href="./views/servicios.html">Mantenimiento y repuestos TitanMaq</a></li>
-                        <li><a href="./views/productos.html">Equipos usados</a></li>
-                        <li><a href="./views/productos.html">Equipos de alquiler</a></li>
-                    </ul>
+              </div>
+          
+              <!-- Tarjeta 2 -->
+              <div class="col-lg-4">
+                <div class="card h-100 bg-dark text-light">
+                  <img src="./IMG/imagen3.jpeg" class="card-img-top" alt="Cargadores de cadenas compactos 249D3">
+                  <div class="card-body">
+                    <h5 class="card-title text-white">Cargadores de cadenas compactos 249D3</h5>
+                    <p class="card-text">
+                      Potencia bruta: SAE J1995<br>
+                      50.1 kW<br>
+                      Capacidades nominales de operación: 35% de carga límite de equilibrio<br>
+                      790 kg<br>
+                      Peso en orden de trabajo<br>
+                      3552 kg<br>
+                      Precio<br>
+                      Contactar al distribuidor por Precio y Disponibilidad
+                    </p>
+                  </div>
                 </div>
-                <div class="columna">
-                    <h3>Capacitación</h3>
-                    <ul type="square">
-                        <li><a href="./views/servicios.html">Capacitación para operadores</a></li>
-                        <li><a href="./views/servicios.html">Manuales TitanMaq</a></li>
-                    </ul>
+              </div>
+          
+              <!-- Tarjeta 3 -->
+              <div class="col-lg-4">
+                <div class="card h-100 bg-dark text-light">
+                  <img src="./IMG/imagen4.jpeg" class="card-img-top" alt="Cargadores de cadenas compactos 259D3">
+                  <div class="card-body">
+                    <h5 class="card-title text-white">Cargadores de cadenas compactos 259D3</h5>
+                    <p class="card-text">
+                      Potencia bruta: SAE J1995<br>
+                      55.4 kW<br>
+                      Capacidades nominales de operación: 35% de carga límite de equilibrio<br>
+                      915 kg<br>
+                      Peso en orden de trabajo<br>
+                      4076 kg<br>
+                      Precio<br>
+                      Contactar al distribuidor por Precio y Disponibilidad
+                    </p>
+                  </div>
+                </div>
+              </div>
+          
+            </div>
+          </div>
+          
+            <div class="">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    
+                    <!-- Columna 1 -->
+                    <div class="col">
+                        <div class="p-3 bg-black ">
+                            <h3 class="text-black bg-warning p-2 ">Servicios y respaldo</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="./views/servicios.html" class="text-warning text-decoration-none fw-bold">Tecnología</a></li>
+                                <li><a href="./views/servicios.html" class="text-warning text-decoration-none fw-bold">JOB SITE SOLUTIONS</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Columna 2 -->
+                    <div class="col">
+                        <div class="p-3 bg-black ">
+                            <h3 class="text-black bg-warning p-2 ">Comprar ahora</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="./views/servicios.html" class="text-warning text-decoration-none fw-bold">Mantenimiento y repuestos TitanMaq</a></li>
+                                <li><a href="./views/productos.html" class="text-warning text-decoration-none fw-bold">Equipos usados</a></li>
+                                <li><a href="./views/productos.html" class="text-warning text-decoration-none fw-bold">Equipos de alquiler</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
+                    <!-- Columna 3 -->
+                    <div class="col">
+                        <div class="p-3 bg-black ">
+                            <h3 class="text-black bg-warning p-2 ">Capacitación</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="./views/servicios.html" class="text-warning text-decoration-none fw-bold">Capacitación para operadores</a></li>
+                                <li><a href="./views/servicios.html" class="text-warning text-decoration-none fw-bold">Manuales TitanMaq</a></li>
+                            </ul>
+                        </div>
+                    </div>
+        
                 </div>
             </div>
-        </section>
+        
+        
+        
+        
     </main>
 
 

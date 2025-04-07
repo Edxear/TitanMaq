@@ -7,58 +7,72 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="/CSS/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Productos</title>
 </head>
 
 <body>
 
     <header>
-        <nav class="navbar border-bottom border-body" data-bs-theme="dark" fixed-top">
+        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="../IMG/TITANMAQ (1).png" alt="Bootstrap" width="30" height="38">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-                <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                  <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                    <li class="nav-item">
-                      <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
-                      <a class="nav-link active" aria-current="page" href="../views/piezas.html">Piezas</a>
-                      <a class="nav-link active" aria-current="page" href="../views/productos.html">Productos</a>
-                      <a class="nav-link active" aria-current="page" href="../views/industrias.html">Industrias</a>
-                      <a class="nav-link active" aria-current="page" href="../views/servicios.html">Servicios</a>
-                      <a class="nav-link active" aria-current="page" href="../views/contacto.html">Contacto</a>
-                    </li>
+                <a class="navbar-brand" href="#">
+                    <img src="../IMG/TITANMAQ (1).png" alt="Bootstrap" width="40" height="40">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-                  <form class="d-flex mt-3" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Buscar</button>
-                  </form>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="../index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../views/piezas.html">Piezas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../views/productos.html">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../views/industrias.html">Industrias</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../views/servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../views/contacto.html">Contacto</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Menú
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="..index.html">Inicio</a></li>
+                                <li><a class="dropdown-item" href="../views/piezas.html">Piezas</a></li>
+                                <li><a class="dropdown-item" href="../views/productos.html">Productos</a></li>
+                                <li><a class="dropdown-item" href="../views/industrias.html">Industrias</a></li>
+                                <li><a class="dropdown-item" href="../views/servicios.html">Servicios</a></li>
+                                <li><a class="dropdown-item" href="../views/contacto.html">Contacto</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Buscar</button>
+                    </form>
                 </div>
-              </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
-    <section class="contenedor-productos">
-        <h2 class="h2-productos">Camiones Articulados</h2>
-        <p class="parrafo-productos">Los camiones articulados transportan un amplio espectro de materiales en distintas
+    <div class="contenedor-productos mt-3">
+        <h2 class="h2-productos mt-5" data-aos="fade-down">Camiones Articulados</h2>
+        <p class="parrafo-productos" data-aos="fade-up">Los camiones articulados transportan un amplio espectro de
+            materiales en distintas
             aplicaciones y condiciones del suelo. El simple funcionamiento y la comodidad de estilo automotriz, así como
             la combinación de puntos de servicio e intervalos prolongados de servicio de estos camiones de descarga le
-            permiten enfocarse en su trabajo y perder menos tiempo y dinero en realizar el mantenimiento.</p>
+            permiten enfocarse en su trabajo y perder menos tiempo y dinero en realizar el mantenimiento.
+        </p>
 
         <div class="productos-grid">
-            <div class="producto">
+            <div class="producto p-1" data-aos="zoom-in">
                 <img class="imagenc" src="../IMG/PagProductos/imagenProductos.jpg" alt="Chasis sin Accesorios 725">
                 <h3>Chasis sin Accesorios 725</h3>
-                <p> 
+                <p>
                     Distancia entre ejes estándar: 3979 mm<br>
                     Carga útil nominal: 27.6 t<br>
                     Modelo de motor: TitanMaq C9.3<br>
@@ -66,7 +80,7 @@
                 </p>
             </div>
 
-            <div class="producto">
+            <div class="producto p-1" data-aos="zoom-in" data-aos-delay="100">
                 <img class="imagenc" src="../IMG/PagProductos/imagenProductos2.jpg" alt="Chasis sin Accesorios 745">
                 <h3>Chasis sin Accesorios 745</h3>
                 <p>
@@ -77,7 +91,7 @@
                 </p>
             </div>
 
-            <div class="producto">
+            <div class="producto p-1" data-aos="zoom-in" data-aos-delay="200">
                 <img class="imagenc" src="../IMG/PagProductos/imagenProductos3.jpg"
                     alt="Camiones articulados de tres ejes">
                 <h3>Camiones articulados de tres ejes - 730 EJ</h3>
@@ -89,16 +103,18 @@
                 </p>
             </div>
         </div>
-    </section>
+    </div>
 
-    <section class="contenedor-productos">
-        <h2 class="h2-productos">Compactadores</h2>
-        <p class="parrafo-productos">Compactar de acuerdo con las especificaciones es muy importante para aplicaciones de
+    <div class="contenedor-productos mt-3">
+        <h2 class="h2-productos" data-aos="fade-down">Compactadores</h2>
+        <p class="parrafo-productos" data-aos="fade-up">Compactar de acuerdo con las especificaciones es muy importante
+            para aplicaciones de
             suelos, rellenos sanitarios y pavimentación. Los compactadores TitanMaq están específicamente diseñados para
-            todo tipo de operación de compactación.</p>
+            todo tipo de operación de compactación.
+        </p>
 
         <div class="productos-grid">
-            <div class="producto">
+            <div class="producto p-1" data-aos="zoom-in">
                 <img class="imagenc" src="../IMG/PagProductos/imagenProductos4.jpg"
                     alt="Compactadores de rellenos sanitarios 816">
                 <h3>Compactadores de rellenos sanitarios 816</h3>
@@ -110,7 +126,7 @@
                 </p>
             </div>
 
-            <div class="producto">
+            <div class="producto p-1" data-aos="zoom-in" data-aos-delay="100">
                 <img class="imagenc" src="../IMG/PagProductos/imagenProductos5.jpg" alt="Rodillos neumáticos CW34">
                 <h3>Rodillos neumáticos CW34</h3>
                 <p>
@@ -121,7 +137,7 @@
                 </p>
             </div>
 
-            <div class="producto">
+            <div class="producto p-1" data-aos="zoom-in" data-aos-delay="200">
                 <img class="imagenc" src="../IMG/PagProductos/imagenProductos6.jpg" alt="Compactadores de suelos 815">
                 <h3>Compactadores de suelos 815</h3>
                 <p>
@@ -132,8 +148,95 @@
                 </p>
             </div>
         </div>
-    </section>
-    
+    </div>
+
+    <!-- <div class="contenedor-productos mt-3">
+        <h2 class="h2-productos mt-5">Camiones Articulados</h2>
+        <p class="parrafo-productos">Los camiones articulados transportan un amplio espectro de materiales en distintas
+            aplicaciones y condiciones del suelo. El simple funcionamiento y la comodidad de estilo automotriz, así como
+            la combinación de puntos de servicio e intervalos prolongados de servicio de estos camiones de descarga le
+            permiten enfocarse en su trabajo y perder menos tiempo y dinero en realizar el mantenimiento.</p>
+
+        <div class="productos-grid">
+            <div class="producto p-1">
+                <img class="imagenc" src="../IMG/PagProductos/imagenProductos.jpg" alt="Chasis sin Accesorios 725">
+                <h3>Chasis sin Accesorios 725</h3>
+                <p> 
+                    Distancia entre ejes estándar: 3979 mm<br>
+                    Carga útil nominal: 27.6 t<br>
+                    Modelo de motor: TitanMaq C9.3<br>
+                    Precio: Contactar al distribuidor por Precio y Disponibilidad
+                </p>
+            </div>
+
+            <div class="producto p-1">
+                <img class="imagenc" src="../IMG/PagProductos/imagenProductos2.jpg" alt="Chasis sin Accesorios 745">
+                <h3>Chasis sin Accesorios 745</h3>
+                <p>
+                    Distancia entre ejes estándar: 4590 mm<br>
+                    Carga útil nominal: 49.9 t<br>
+                    Modelo de motor: TitanMaq C18<br>
+                    Precio: Contactar al distribuidor por Precio y Disponibilidad
+                </p>
+            </div>
+
+            <div class="producto p-1">
+                <img class="imagenc" src="../IMG/PagProductos/imagenProductos3.jpg"
+                    alt="Camiones articulados de tres ejes">
+                <h3>Camiones articulados de tres ejes - 730 EJ</h3>
+                <p>
+                    Modelo de motor: TitanMaq C13<br>
+                    Carga útil nominal: 27.1 t<br>
+                    Colmada (SAE 2:1): 16.9 m³<br>
+                    Precio: Contactar al distribuidor por Precio y Disponibilidad
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-productos mt-3">
+        <h2 class="h2-productos">Compactadores</h2>
+        <p class="parrafo-productos">Compactar de acuerdo con las especificaciones es muy importante para aplicaciones de
+            suelos, rellenos sanitarios y pavimentación. Los compactadores TitanMaq están específicamente diseñados para
+            todo tipo de operación de compactación.</p>
+
+        <div class="productos-grid">
+            <div class="producto p-1">
+                <img class="imagenc" src="../IMG/PagProductos/imagenProductos4.jpg"
+                    alt="Compactadores de rellenos sanitarios 816">
+                <h3>Compactadores de rellenos sanitarios 816</h3>
+                <p>
+                    Potencia bruta: SAE J1995:2014 - 212 kW<br>
+                    Potencia neta - SAE J1349:2011 - 186 kW<br>
+                    Potencia neta: ISO 9249:2007 - 186 kW<br>
+                    Precio: Contactar al distribuidor por Precio y Disponibilidad
+                </p>
+            </div>
+
+            <div class="producto p-1">
+                <img class="imagenc" src="../IMG/PagProductos/imagenProductos5.jpg" alt="Rodillos neumáticos CW34">
+                <h3>Rodillos neumáticos CW34</h3>
+                <p>
+                    Peso vacío: 10000 kg<br>
+                    Peso máximo con lastre: 27000 kg<br>
+                    Ancho de compactación: 2090 mm<br>
+                    Precio: Contactar al distribuidor por Precio y Disponibilidad
+                </p>
+            </div>
+
+            <div class="producto p-1">
+                <img class="imagenc" src="../IMG/PagProductos/imagenProductos6.jpg" alt="Compactadores de suelos 815">
+                <h3>Compactadores de suelos 815</h3>
+                <p>
+                    Potencia bruta (SAE J1995:2014): 212 kW<br>
+                    Potencia neta (SAE J1349:2011): 186 kW<br>
+                    Potencia neta (ISO 9249:2007): 186 kW<br>
+                    Precio: Contactar al distribuidor por Precio y Disponibilidad
+                </p>
+            </div>
+        </div>
+    </div>
+     -->
 
     <footer>
         <p><strong> © 2025 TitanMaq</strong> . Reservados todos los derechos.</p>
@@ -143,6 +246,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
