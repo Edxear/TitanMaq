@@ -33,23 +33,23 @@ $yellow-hover: #e6b800;
 }
 
 
-// Estilos Globales
+ // Estilos Globales
 
-// .imagen1 {
-//   width: 100%;
-//   overflow: hidden;
-//   height: 60vh;
-//   object-fit: cover;
-//   display: block;
+.imagen1 {
+   width: 100%;
+   overflow: hidden;
+   height: 60vh;
+   object-fit: cover;
+   display: block;
 
-//   @media (max-width: 768px) {
-//     .contenedor-imagen img {
-//       height: 40vh;
+  @media (max-width: 768px) {
+     .contenedor-imagen img {
+     height: 40vh;
 
-//     }
+     }
 
-//   }
-// }
+   }
+ }
 
 
 body {
