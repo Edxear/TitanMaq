@@ -8,6 +8,19 @@
   font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
 }
 
+.imagen1 {
+  width: 100%;
+  overflow: hidden;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 768px) {
+  .imagen1 .contenedor-imagen img {
+    height: 40vh;
+  }
+}
+
 body {
   background-color: #ffffff;
   display: flex;
