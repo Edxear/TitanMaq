@@ -1,0 +1,709 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  
+}
+
+
+
+/* index */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  padding-top: 80px;
+
+  padding-bottom: 80px;
+  
+}
+
+h1{
+  margin: 0;
+  font-size: 60px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h2 {
+  margin: 0;
+  font-size: 40px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+h3 {
+  margin: 0;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+
+main {
+  flex: 1;
+  /* para empujar el footer por tener poco contenido */
+}
+
+/* navegador */
+
+.logo {
+  margin: 5px;
+  border: none;
+  padding: none;
+  width: 15%; 
+  height: auto;
+  max-width: 120px; 
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 30%; 
+    max-width: 80px;
+  }
+}
+
+header {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
+}
+
+nav {
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: right; /* Centra los elementos del menú */
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Coloca los elementos en columna en pantallas pequeñas */
+    text-align: center;
+    width: 100%;
+  }
+  nav li {
+    margin: 10px 0;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Integración de Bootstrap */
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  background-color: #000000 !important;
+}
+
+.navbar-brand img {
+  max-height: 40px; /* Reduce el tamaño del logo en el navbar */
+}
+
+@media (max-width: 768px) {
+  .navbar-brand img {
+    max-height: 30px; /* Reduce aún más el tamaño en móviles */
+  }
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-item {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .navbar-nav {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+
+.imagen1 {
+  width: 100%;
+  margin-top: 150xp;
+
+}
+
+/* contenedor de productos */
+
+/* Contenedor principal para las columnas */
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: white;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.productos-interes {
+  flex: 1 1 20%; /* Se ajusta al 48% para que entren dos productos por fila */
+  text-align: center;
+  border: 1px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+  color: black;
+  background-color: white;
+}
+
+.imagenc {
+  width: 180px;
+  margin-top: 10px;
+}
+
+.productos-interes h1 {
+  font-size: 18px;
+  margin: 15px 0 10px;
+}
+
+.productos-interes p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .productos-container {
+    flex-direction: column;
+  }
+  
+  .productos-interes {
+    flex: 1 1 100%; /* Ocupa toda la fila en móviles */
+  }
+}
+
+/* lista de pie debajo de PRODUCTOS */
+
+.columnas {
+  display: flex;
+  justify-content: center;
+  /* Centra las columnas horizontalmente */
+  align-items: stretch;
+  /* Alinea las columnas a la misma altura */
+  max-width: 1100px;
+  margin: 20px auto;
+  gap: 20px;
+  /* Espaciado entre columnas */
+  width: 100%;
+  /* Asegura que el contenedor ocupe el 100% del ancho disponible */
+}
+
+.columna {
+  background: rgb(0, 0, 0);
+  padding: 15px;
+  /* Más espacio interno */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: rgb(255, 255, 255);
+  flex-grow: 1;
+  /* Asegura que todas las columnas crezcan por igual */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Asegura que el contenido se distribuya dentro de cada columna */
+}
+
+.columna h1 {
+  font-size: 1.4em;
+  margin-bottom: 12px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  /* Alinea el texto de los encabezados */
+}
+
+.columna ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.columna ul li {
+  padding: 5px 5px;
+  font-size: 1em;
+  color: white;
+}
+
+/* Estilo para hipervínculos */
+.columna a {
+  color: #ffcc00;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.columna a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .columnas {
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+  }
+
+  .columna {
+    max-width: 85%;
+    padding: 15px;
+  }
+}
+
+
+
+/* pie de pag */
+footer {
+  background: #000000;
+  color: white;
+  font-weight: bold;
+  padding: 10px 0;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Piezas */
+
+/* Estilos del header */
+header {
+  background-color: #000000;
+  color: white;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+nav ul {
+  list-style-type: square;
+  padding: 0;
+  margin-top: 10px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+h2 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 20px;
+}
+
+/* Estilos de la imagen */
+.imagenP {
+  width: 100%;
+  height: auto;
+}
+
+/* Estilos del formulario */
+.formP {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+  margin-top: 20px;
+  /* Espacio entre la imagen y el formulario */
+  margin-bottom: 10px;
+  /* Espacio antes del footer */
+}
+
+.formP label {
+  display: block;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.formP input,
+.formP select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.formP input:focus,
+.formP select:focus {
+  border-color: #000000;
+  outline: none;
+}
+
+/* Botón de envío */
+
+.formP input[type="submit"] {
+  background-color: #000000;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 15px;
+}
+
+.formP input[type="submit"]:hover {
+  background-color: #ffcc00;
+}
+
+/* Estilos del footer */
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+/* Responsividad */
+@media (max-width: 500px) {
+  .formP {
+    max-width: 90%;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 5px 0;
+  }
+}
+
+/* tarjetas debajo del form */
+
+/* Contenedor principal sin fondo y centrado */
+.container-piezas {
+  color: white;
+  padding: 20px;
+  text-align: center;
+  width: 100vw;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+/* Título */
+.container-piezas h2 {
+  color: rgb(0, 0, 0);
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+/* Contenedor de las tarjetas alineadas arriba */
+.cards-piezas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  /* Alineación superior */
+  gap: 20px;
+  width: 100%;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+/* Estilos de las tarjetas con fondo negro */
+.card {
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos de texto en las tarjetas */
+.card h3 {
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+}
+
+.card p {
+  color: #ccc;
+  font-size: 1em;
+}
+
+
+/* PRODUCTOS */
+
+.contenedor-productos {
+  margin-bottom: 20px;
+  display: block;
+}
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Para pantallas más grandes (computadoras) */
+@media (min-width: 768px) {
+  .productos-grid {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+}
+
+.producto {
+  padding: 15px;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.imagenc {
+  width: 100%;
+  height: auto;
+}
+
+.h2-productos {
+  text-align: center;
+  font-size: 30px;
+}
+
+
+/* INDUSTRIAS */
+
+.h2-industrias {
+  text-align: center;
+  font-size: 30px;
+}
+
+.parrafo-industrias {
+  text-align: center;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.contenedor-industrias {
+  display: flex;
+  flex-direction: column; /* Para que en móviles sea en columna */
+  align-items: center;
+}
+
+/* Contenedor de imágenes en fila para pantallas grandes */
+.contenedor-imagenes {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 10px;
+  margin: 5px;
+}
+
+/* Hacer que las imágenes sean más flexibles y responsivas */
+div img {
+  width: 100%;
+  max-width: 180px; 
+  margin-top: 10px;
+  border: 3px solid black;
+}
+
+/* Ajustar lista para que no desborde en móviles */
+.lista-industrias {
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  text-align: center;
+  margin: 5px;
+  padding: 10px;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .contenedor-imagenes {
+    flex-direction: column; 
+    align-items: center;
+  }
+
+  div img {
+    width: 80%; 
+    max-width: 150px;
+  }
+}
+
+
+/* SERVICIOS */
+
+.contenedor-servicios {
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas por defecto */
+  gap: 30px;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .contenedor-servicios {
+    grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+  }
+}
+
+.tarjeta {
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.h2-servicios {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.parrafo-servicios {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #ffcc00;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #e6b800;
+}
+
+/* CONTACTO */
+/* el Form ya toma las propiedades del anterior. */
+
+.container {
+  max-width: 1000px;
+  background: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid black; 
+  width: 100%; 
+  margin: 0 auto;
+}
+
+.accordion {
+  min-height: 50px;
+  max-width: 100%; /* Ajustado para ser responsivo */
+}
+
+.accordion-body, .accordion-item {
+  min-height: 50px;
+  width: 100%; /* Evita que se desborde en pantallas pequeñas */
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas grandes */
+  grid-template-rows: auto;
+  gap: 20px;
+  max-width: 1000px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Diseño responsivo para dispositivos móviles */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
+}
+
+.grid-item {
+  background: white;
+  width: 100%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-item img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  background: #ffcc00;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+  display: inline-block;
+  width: fit-content;
+}
+
+
+
