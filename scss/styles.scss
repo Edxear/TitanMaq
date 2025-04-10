@@ -43,7 +43,7 @@ $yellow-hover: #e6b800;
   display: block;
 
   @media (max-width: 768px) {
-    
+
     .contenedor-imagen img {
       height: 40vh;
 
@@ -294,8 +294,8 @@ footer {
 // Sección de Industrias ---------------------------------------
 
 .card-industria {
-  position: relative;
-  color: white;
+  position: absolute;
+  color: rgb(0, 0, 0);
   overflow: hidden;
   background: none;
   border: none;
@@ -309,7 +309,7 @@ footer {
       width: 100%;
       height: 300px;
       object-fit: cover;
-      border-radius: 10px;
+
 
       .h2-industrias {
         text-align: center;
@@ -317,7 +317,7 @@ footer {
 
         .parrafo-industrias {
           text-align: center;
-          margin-bottom: 5px;
+          margin-bottom: 20px;
           font-size: 20px;
         }
       }
@@ -361,41 +361,44 @@ footer {
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
 
-    .tarjeta {
-      background-color: #f8f8f8;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba($black, 0.1);
-      text-align: left;
+    .h2-servicios {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
 
-      .h2-servicios {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
+      .parrafo-servicios {
+        font-size: 16px;
+        color: #333;
+        line-height: 1.5;
+        margin-bottom: 20px;
 
-        .parrafo-servicios {
-          font-size: 16px;
-          color: #333;
-          line-height: 1.5;
-          margin-bottom: 20px;
 
-          .btn {
-            background-color: $yellow;
-            border: none;
-            padding: 14px 20px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            border-radius: 5px;
-            @include transition(background 0.3s ease);
-
-            &:hover {
-              background-color: $yellow-hover;
-            }
-          }
-        }
       }
     }
+
+  }
+}
+
+.tarjeta {
+  background-color: #f8f8f8;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba($black, 0.1);
+  text-align: left;
+}
+
+.btn {
+  background-color: $yellow;
+  border: none;
+  padding: 14px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  @include transition(background 0.3s ease);
+
+  &:hover {
+    background-color: $yellow-hover;
   }
 }
 
@@ -432,36 +435,42 @@ footer {
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-
-    .grid-item {
-      background: $white;
-      width: 100%;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0px 4px 6px rgba($black, 0.1);
-
-      img {
-        width: 100%;
-        border-radius: 8px;
-
-        .text-content {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-
-          .button {
-            background: $yellow;
-            color: $black;
-            padding: 10px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 10px;
-            display: inline-block;
-            width: fit-content;
-          }
-        }
-      }
-    }
   }
 }
+
+.img-contacto {
+  width: 100%;
+  border-radius: 8px;}
+
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+  }
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+
+  .grid-item {
+    background: $white;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba($black, 0.1);
+  }
+
+  .button {
+    background: $yellow;
+    color: $black;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: inline-block;
+    width: fit-content;
+  }
