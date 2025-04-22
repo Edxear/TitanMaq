@@ -17,11 +17,11 @@
 <body>
 
   <header>
-    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
       <div class="container-fluid">
-        <!-- <a class="navbar-brand" href="#">
-          <img src="../IMG/TITANMAQ (1).png" alt="Bootstrap" >
-        </a> -->
+        <a class="navbar-brand" href="#">
+          <img src="../IMG/titanmaq_navbar.png" alt="logo TitanMaq" width="250" height="100">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -60,80 +60,102 @@
       </div>
     </nav>
   </header>
-  <br>
-  <br>
-  <div class="mt-5">
-  <h2 data-aos="fade-up" class="mt-4"><strong>Encuentre las piezas y los recursos para hacer el trabajo</strong></h2>
-
-  <h3 data-aos="fade-up">Agregue su equipo en el siguiente formulario para encontrar piezas adecuadas.</h3></div>
-
-  <div data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">
-    <form class="formP mt-4" action="/submit" method="post">
-      <h3>Por número de serie o por modelo</h3>
-
-      <label for="serie">Ingrese número de serie:</label>
-      <input type="text" name="serie" id="serie" placeholder="Ejemplo: 12345XYZ" required>
-
-      <label for="modelo">Ingrese modelo de su equipo:</label>
-      <input type="text" name="modelo" id="modelo" placeholder="Ejemplo: TitanMaq D6" required>
-
-      <label for="pais">País:</label>
-      <select name="pais" id="pais" required>
-        <option value="" disabled selected>Seleccione su país</option>
-        <option value="Argentina">Argentina</option>
-        <option value="Brasil">Brasil</option>
-        <option value="Uruguay">Uruguay</option>
-        <option value="Chile">Chile</option>
-      </select>
-
-      <label for="email">Email:</label>
-      <input type="email" name="email" id="email" placeholder="ejemplo@correo.com" required>
-
-      <input type="submit" value="Enviar">
-    </form>
-  </div>
-
-  <div class="container my-5">
-    <h2 data-aos="fade-up" class="mt-3">¿Por qué elegir piezas originales?</h2>
-    <div class="mb-3 mt-3">
-      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
-        <div class="col" data-aos="fade-up">
-          <div class="p-3 bg-black">
-            <h3 class="text-black bg-warning p-1">Fabricadas para durar</h3>
-            <p class="text-white">Encuentre las piezas adecuadas en el momento adecuado, en cualquier momento. Todas las piezas están cubiertas por una garantía de 12 meses.</p>
+  <br><br><br>
+  <div class="container-fluid mt-5">
+    <div class="container-fluid p-4 shadow bg-light rounded row g-3 mt-3">
+      <form target="_blank" action="https://formsubmit.co/exedear95@gmail.com" method="POST">
+        <form class="text-black bg-warning row g-3 mt-3 ml-5 mr-5 p-4 shadow bg-light rounded">
+          <h2><strong>Encuentre las piezas y los recursos para hacer el trabajo</strong></h2>
+          <div class="col-md-3 col-lg-6 ">
+            <label for="inputEmail4" class="form-label"><strong>Correo:</strong></label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="JuanF@gmail.com">
           </div>
-        </div>
-        <div class="col" data-aos="fade-up">
-          <div class="p-3 bg-black">
-            <h3 class="text-black bg-warning p-1">Entrega rápida</h3>
-            <p class="text-white">Obtenga sus piezas rápidamente con nuestras múltiples opciones de entrega.</p>
+          <div class="col-md-3 col-lg-6 ">
+            <label for="inputAddress" class="form-label"><strong>Número de serie:</strong></label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="0098781237123">
           </div>
-        </div>
-        <div class="col" data-aos="fade-up">
-          <div class="p-3 bg-black">
-            <h3 class="text-black bg-warning p-1">Opciones de pago</h3>
-            <p class="text-white">Ofrecemos una variedad de formas de pago, incluidas opciones de pago seguras para todos los clientes en todo el mundo.</p>
+          <div class="col-md-3 col-lg-6">
+            <label for="inputAddress" class="form-label"><strong>Nombre:</strong></label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Juan">
+          </div>
+          <div class="col-md-3 col-lg-6">
+            <label for="inputAddress2" class="form-label"><strong>Apellido:</strong></label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Flores">
+          </div>
+          <div class="col-md-3 col-lg-6">
+            <label for="inputCity" class="form-label"><strong>Ciudad:</strong></label>
+            <input type="text" class="form-control" id="inputCity" placeholder="Entre Rios - Gualeguaychú">
+          </div>
+          <div class="col-md-4">
+            <label for="inputState" class="form-label"><strong>Pais</strong></label>
+            <select id="inputState" class="form-select">
+              <option selected>Argentina</option>
+              <option selected>Brasil</option>
+              <option selected>Uruguay</option>
+              <option selected>Chile</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-2">
+            <label for="inputZip" class="form-label"><strong>Codigo Postal</strong></label>
+            <input type="text" class="form-control" id="inputCP" placeholder="2021">
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="gridCheck">
+              <label class="form-check-label" for="gridCheck">
+                <strong>Quiero recibir información de actualizaciones de TitanMaq</strong>
+              </label>
+            </div>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </div>
+        </form>
+    </div>
+
+
+
+    <div class="container-fluid my-5 ">
+      <h2 data-aos="fade-up" class="mt-3 ">¿Por qué elegir piezas originales?</h2>
+      <div class="mb-3 mt-3 ">
+        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+          <div class="col" data-aos="fade-up">
+            <div class="p-3 bg-black ">
+              <h3 class="text-black bg-warning p-1">Fabricadas para durar</h3>
+              <p class="text-white">Encuentre las piezas adecuadas en el momento adecuado, en cualquier momento. Todas
+                las
+                piezas están cubiertas por una garantía de 12 meses.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up">
+            <div class="p-3 bg-black">
+              <h3 class="text-black bg-warning p-1">Entrega rápida</h3>
+              <p class="text-white">Obtenga sus piezas rápidamente con nuestras múltiples opciones de entrega.</p>
+            </div>
+          </div>
+          <div class="col" data-aos="fade-up">
+            <div class="p-3 bg-black">
+              <h3 class="text-black bg-warning p-1">Opciones de pago</h3>
+              <p class="text-white">Ofrecemos una variedad de formas de pago, incluidas opciones de pago seguras para
+                todos los clientes en todo el mundo.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+    <br>
+    <footer>
+      <p><strong> © 2025 TitanMaq</strong> . Reservados todos los derechos.</p>
+    </footer>
 
-
-
-
-  <br>
-  <footer>
-    <p><strong> © 2025 TitanMaq</strong> . Reservados todos los derechos.</p>
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 
 </body>
 
