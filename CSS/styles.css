@@ -22,15 +22,14 @@ img {
 
 .contenedor-imagen {
   width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
+  margin: 0;
   overflow: hidden;
-  padding: 1rem;
+  padding: 1rem 0;
 }
 
 .imagen1 {
   width: 100%;
-  height: auto;
+  height: 960px;
   aspect-ratio: 16/9;
   object-fit: cover;
   border-radius: 12px;
@@ -100,17 +99,55 @@ header h1 {
 footer {
   background-color: #000000;
   color: #ffffff;
+  width: 100%;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .social-footer {
+  margin: 1rem 0;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+}
+footer .social-footer a {
+  color: #ffffff;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-align: center;
+  align-items: center;
+}
+footer .social-footer a:hover {
+  color: white;
+}
+footer .footer-text {
+  font-size: 1, 5rem;
+}
+
+.social-icons {
+  margin: 1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+.social-icons a {
+  color: #ffffff;
+  font-size: 2rem;
+  transition: color 0.3s ease;
+}
+.social-icons a:hover {
+  color: white;
 }
 
 .imagenP {
   width: 100%;
   overflow: hidden;
-  height: 400px;
+  height: 600px;
   object-fit: cover;
-  display: block;
+  display: absolute;
 }
 @media (max-width: 768px) {
   .imagenP .contenedor-imagen img {
@@ -416,6 +453,13 @@ img,
 .btn-warning:hover {
   background-color: rgb(204, 163.2, 0);
   text-decoration: none;
+}
+
+.p-contacto {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 /*# sourceMappingURL=styles.css.map */
