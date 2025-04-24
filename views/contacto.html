@@ -61,83 +61,114 @@
   </header>
 
   <main class="container-fluid mt-5">
-    <div class="container p-2 shadow bg-light rounded mt-5 mb-5">
-      <form class="justify-content-center" target="_blank" action="https://formsubmit.co/exedear95@gmail.com" method="POST">
-        <h2 class="mb-4">
-          <strong>Complete el formulario</strong>
+    <div class="container p-4 shadow bg-light rounded mt-5 mb-5">
+      <form class="row g-3 justify-content-center" target="_blank" action="https://formsubmit.co/exedear95@gmail.com"
+        method="POST">
+        <div class="col-12 text-center">
+          <h2 class="mb-2"><strong>Complete el formulario</strong></h2>
           <small class="text-body-secondary d-block">Un asesor se contactará dentro de las 24hs.</small>
-        </h2>
-  
-        <div class="row g-3">
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label"><strong>Correo:</strong></label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="JuanF@gmail.com" required>
+        </div>
+
+        <div class="col-md-6">
+          <label for="email" class="form-label"><strong>Correo:</strong></label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="JuanF@gmail.com" required>
+        </div>
+        <div class="col-md-6">
+          <label for="password" class="form-label"><strong>Contraseña:</strong></label>
+          <input type="password" class="form-control" id="password" name="password" placeholder="12tyu465zwQ" required>
+        </div>
+        <div class="col-md-6">
+          <label for="firstName" class="form-label"><strong>Nombre:</strong></label>
+          <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Juan" required>
+        </div>
+        <div class="col-md-6">
+          <label for="lastName" class="form-label"><strong>Apellido:</strong></label>
+          <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Flores" required>
+        </div>
+        <div class="col-md-6">
+          <label for="city" class="form-label"><strong>Ciudad:</strong></label>
+          <input type="text" class="form-control" id="city" name="city" placeholder="Entre Ríos - Gualeguaychú"
+            required>
+        </div>
+        <div class="col-md-4">
+          <label for="country" class="form-label"><strong>País:</strong></label>
+          <select id="country" name="country" class="form-select" required>
+            <option selected disabled>Seleccione</option>
+            <option>Argentina</option>
+            <option>Brasil</option>
+            <option>Uruguay</option>
+            <option>Chile</option>
+            <option>Otro</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="postalCode" class="form-label"><strong>Código Postal:</strong></label>
+          <input type="text" class="form-control" id="postalCode" name="postalCode" placeholder="2021" required>
+        </div>
+
+        <div class="col-12">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="privacyPolicy" name="privacyPolicy" required>
+            <label class="form-check-label" for="privacyPolicy">
+              <strong>Estoy de acuerdo con las políticas de privacidad.</strong>
+            </label>
           </div>
-          <div class="col-md-6">
-            <label for="inputPassword4" class="form-label"><strong>Contraseña:</strong></label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="12tyu465zwQ" required>
-          </div>
-          <div class="col-md-6">
-            <label for="inputAddress" class="form-label"><strong>Nombre:</strong></label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="Juan" required>
-          </div>
-          <div class="col-md-6">
-            <label for="inputAddress2" class="form-label"><strong>Apellido:</strong></label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Flores" required>
-          </div>
-          <div class="col-md-6">
-            <label for="inputCity" class="form-label"><strong>Ciudad:</strong></label>
-            <input type="text" class="form-control" id="inputCity" placeholder="Entre Ríos - Gualeguaychú" required>
-          </div>
-          <div class="col-md-4">
-            <label for="inputState" class="form-label"><strong>País</strong></label>
-            <select id="inputState" class="form-select" required>
-              <option selected disabled>Seleccione</option>
-              <option>Argentina</option>
-              <option>Brasil</option>
-              <option>Uruguay</option>
-              <option>Chile</option>
-              <option>Otro</option>
-            </select>
-          </div>
-          <div class="col-md-2">
-            <label for="inputCP" class="form-label"><strong>Código Postal</strong></label>
-            <input type="text" class="form-control" id="inputCP" placeholder="2021" required>
-          </div>
-          <div class="col-12">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="gridCheck" required>
-              <label class="form-check-label" for="gridCheck">
-                <strong>Estoy de acuerdo con las políticas de privacidad.</strong>
-              </label>
-            </div>
-          </div>
-          <div class="col-12">
-            <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
-          </div>
+        </div>
+
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary w-100 mt-3">Enviar</button>
         </div>
       </form>
     </div>
-  
-    <div class="container mt-2 mb-5">
-      <div class="row g-4 shadow bg-white rounded p-3">
-        <div class="col-md-6 text-center text-md-start" data-aos="fade-right">
+
+    <div class="container-fluid mt-2 mb-5">
+      <div class="row g-4 shadow bg-white rounded p-4 justify-content-center">
+        <div class="col-md-6 text-center shadow bg-white container-fluid mt-3" data-aos="fade-center">
           <h2><strong>Comuníquese con el respaldo de TitanMaq</strong></h2>
           <p>Llene el formulario de contacto y un representante se comunicará con usted.</p>
-          <a href="#" class="btn btn-warning">Contacto</a>
         </div>
-        <div class="col-md-6 text-center" data-aos="fade-left">
-          <img class="img-fluid rounded" src="../IMG/PagContactos/imagenoperario.jpeg" alt="Operario con celular">
-        </div>
-        <div class="col-md-6 text-center text-md-start" data-aos="fade-right">
+        <div class="col-md-6 text-center shadow bg-white container-fluid mt-3 " data-aos="fade-center">
           <h2><strong>Comuníquese con su distribuidor TitanMaq</strong></h2>
           <p>Su distribuidor TitanMaq puede proporcionarle un respaldo personalizado para usted y su negocio.</p>
-          <a href="#" class="btn btn-warning">Encuentre Su Distribuidor</a>
+          <a href="#" class="btn btn-warning mb-2">Encuentre Su Distribuidor</a>
         </div>
-        <div class="col-md-6 text-center" data-aos="fade-left">
-          <img class="img-fluid rounded" src="../IMG/PagContactos/imagenoperaria.jpeg" alt="Operaria con computadora">
+        <div class="col-md-6 text-center shadow bg-white container-fluid mt-3" data-aos="fade-center">
+          <h2><strong>¿TitanMaq ofrece capacitación para operadores o técnicos?</strong></h2>
+          <p>TitanMaq ofrece capacitación para operadores de equipo pesado, técnicos de servicio y líderes. Las opciones
+            incluyen cursos presenciales, aprendizaje a pedido y capacitación en un simulador TitanMaq.
+
+            Muchos distribuidores TitanMaq también ofrecen capacitación. Comuníquese con su distribuidor TitanMaq para
+            obtener más información.</p>
         </div>
+        <div class="col-md-6 text-center shadow bg-white container-fluid mt-3" data-aos="fade-center">
+          <h2><strong>¿Dónde puede comprar mercadería TitanMaq (botas, modelos a escala, gorras, etc.)?</strong></h2>
+          <p>Puede encontrar mercadería original TitanMaq disponible en una amplia variedad de comerciantes minoristas,
+            distribuidores TitanMaq, tiendas especializadas y nuestra tienda TitanMaq en Amazon.
+
+            También puede comprar mercadería TitanMaq en línea en www.shopTitanMaq.com.</p>
+          <a href="#" class="btn btn-warning mb-2">Tienda TitanMaq</a>
+        </div>
+        <div class="col-md-6 text-center shadow bg-white container-fluid mt-3 mb-3" data-aos="fade-center">
+          <h2><strong>¿Dónde se ubica TitanMaq?</strong></h2>
+          <p>La sede central de TitanMaq Inc. está ubicada en San Francisco, California-USA. También tenemos aproximadamente 150
+            plantas de TitanMaq alrededor del mundo. Consulte nuestras ubicaciones a nivel mundial.
+
+            Los distribuidores TitanMaq son de propiedad local con ubicaciones en todo el mundo. La red es la más amplia de
+            la industria y presta servicios en más de 190 países con 2.700 sucursales. Para encontrar un distribuidor
+            local, complete el formulario y un asesor respondera a la brevedad su consulta.</p>
+        </div>
+        <div class="col-md-6 text-center shadow bg-white container-fluid mt-3 mb-3" data-aos="fade-center">
+          <h2><strong>¿Qué es la marca Cat?</strong></h2>
+          <p>Cat es la marca emblemática en la cartera de Caterpillar y una de las más valiosas del mundo. Caterpillar
+            diseña y fabrica equipos pesados Cat para una amplia variedad de industrias. Las máquinas y los motores Cat
+            son ampliamente reconocidos como productos excepcionales, y por su calidad y fiabilidad superiores.</p>
+        </div>
+
+
+
+
       </div>
+    </div>
     </div>
   </main>
 
