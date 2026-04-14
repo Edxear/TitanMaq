@@ -26,6 +26,7 @@ body {
   background-color: $white;
   font-family: $font;
   color: #212529;
+  line-height: 1.55;
   overflow-x: hidden;
   margin: 0;
   padding-top: 82px;
@@ -38,6 +39,24 @@ main { width: 100%; }
 h1 { font-family: $font; font-size: clamp(1.75rem, 4vw, 3rem); margin: 0; }
 h2 { font-family: $font; font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 0; }
 h3 { font-family: $font; font-size: clamp(1rem, 2vw, 1.35rem); margin: 0; }
+
+a { text-underline-offset: 2px; }
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #0d6efd;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.2);
+}
 
 // ========================================
 // NAVBAR
@@ -138,6 +157,7 @@ header { width: 100%; }
     line-height: 1.6;
     color: $white;
     margin: 0;
+    overflow-wrap: anywhere;
   }
 
   a.text-warning {
@@ -417,4 +437,22 @@ footer {
   .imagenc { height: 150px; }
   .card-img-top { height: 145px; }
   .contenedor-servicios { padding: 0 0.5rem; }
+  .parrafo-productos,
+  .parrafo-servicios,
+  .p-contacto {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .producto:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
