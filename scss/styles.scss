@@ -1,549 +1,420 @@
-// Variables
-$base-font: Arial, sans-serif;
-$heading-font: Arial, sans-serif;
-$white: #ffffff;
-$black: #000000;
-$yellow: #ffcc00;
-$yellow-hover: #e6b800;
+﻿// ========================================
+// TitanMaq — Estilos Principales
+// ========================================
 
-* {
+// --- Variables ---
+$primary:      #FFC107;
+$primary-dark: #E0A800;
+$dark:         #111111;
+$dark-card:    #1C1C1C;
+$light:        #F8F9FA;
+$white:        #FFFFFF;
+$muted:        #6C757D;
+$radius:       8px;
+$font:         'Segoe UI', Arial, sans-serif;
+
+// --- Mixins ---
+@mixin transition($args...) { transition: $args; }
+
+// ========================================
+// RESET & BASE
+// ========================================
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  background-color: $white;
+  font-family: $font;
+  color: #212529;
+  overflow-x: hidden;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  max-width: 100%;
+  padding-top: 82px;
 }
 
-// Favicon
-.material-symbols-outlined {
-  font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-}
+img { max-width: 100%; height: auto; display: block; }
 
-// Mixins
-@mixin transition($properties...) {
-  transition: $properties;
-}
+main { width: 100%; }
 
-@mixin flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+h1 { font-family: $font; font-size: clamp(1.75rem, 4vw, 3rem); margin: 0; }
+h2 { font-family: $font; font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 0; }
+h3 { font-family: $font; font-size: clamp(1rem, 2vw, 1.35rem); margin: 0; }
 
+// ========================================
+// NAVBAR
+// ========================================
 
-// Estilos Globales
-
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+header { width: 100%; }
 
 .navbar-brand img {
-  max-width: 30px; 
-  height: auto;
+  max-height: 58px;
+  width: auto;
 }
+
+.navbar .d-flex {
+  width: min(100%, 320px);
+}
+
+@media (max-width: 991px) {
+  .navbar .d-flex {
+    width: 100%;
+    margin-top: 0.75rem;
+  }
+}
+
+// ========================================
+// HERO IMAGE
+// ========================================
 
 .contenedor-imagen {
   width: 100%;
-  margin: 0;          // Quitamos el centrado
   overflow: hidden;
-  padding: 1rem 0;
+  padding: 0;
 }
 
 .imagen1 {
   width: 100%;
-  height: 800px;
-  aspect-ratio: 16 / 9;
+  height: clamp(170px, 26vw, 330px);
   object-fit: cover;
-  border-radius: 12px;
+  object-position: center;
   display: block;
 }
 
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-
-body {
-  $base-font: Arial, sans-serif;
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 0;
-  text-align: center;
-  overflow-x: hidden;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-  font-size: 60px;
-  font-family: $heading-font;
-}
-
-h2 {
-  margin: 0;
-  font-size: 40px;
-  font-family: $heading-font;
-}
-
-h3 {
-  margin: 0;
-  font-size: 25px;
-  font-family: $heading-font;
-}
-
-main {
-  flex: 1;
-}
-
-
-
-
-// Header y Navegación -----------------------------------------
-
-header {
-  background-color: $black;
-  color: $white;
-  width: 100%;
-  padding: 15px 0;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  box-shadow: 0 2px 5px rgba($black, 0.1);
-  z-index: 1000;
-
-  h1 {
-    margin: 0;
-    font-size: 24px;
-  }
-}
-
-.navbar-brand img {
-  max-width: 150px;
-  height: auto;
-}
-
-// Footer ------------------------------------------------------
-
-footer {
-  background-color: $black;
-  color: $white;
-  width: 100%;
-  text-align: center;
-  padding: 2rem 1rem;
-  font-size: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .social-footer{
-    margin: 1rem 0;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    gap: 1rem;
-
-    a {
-      color: $white;
-      font-size: 1rem;
-      transition: color 0.3s ease;
-      text-align: center;
-      align-items: center;
-
-      &:hover {
-        color: lighten($white, 20%);
-      }
-    }
-  }
-
-  .footer-text {
-    font-size: 1,5rem;
-  }
-}
-
-.social-icons{
-  margin: 1rem 0;
-  display: flex;
-  gap: 1rem;
-
-  a {
-    color: $white;
-    font-size: 2rem;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: lighten($white, 20%);
-    }
-  }
-}
-
-// Sección Piezas ----------------------------------------------
-
-
-
-.imagenP {
-  width: 100%;
-  overflow: hidden;
-  height: 600px;
-  object-fit: cover;
-  display: absolute;
-
-  @media (max-width: 768px) {
-    .contenedor-imagen img {
-      height: 40vh;
-
-    }
-
-  }
-}
-
-.formP {
-  background: $white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba($black, 0.1);
-  max-width: 400px;
-  width: 100%;
-  text-align: left;
-  margin-top: 20px;
-  margin-bottom: 10px;
-
-  label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-
-    input,
-    select {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-
-      &:focus {
-        border-color: $black;
-        outline: none;
-
-        input[type="submit"] {
-          background-color: $black;
-          color: $white;
-          font-size: 18px;
-          font-weight: bold;
-          border: none;
-          padding: 10px;
-          cursor: pointer;
-          @include transition(background 0.3s);
-          margin-top: 15px;
-
-          &:hover {
-            background-color: $yellow;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 500px) {
-  .formP {
-    max-width: 90%;
-  }
-
-  nav ul li {
-    display: block;
-    margin: 5px 0;
-  }
-}
-
-// Tarjetas Debajo del Formulario - Piezas
-
-.container-piezas {
-  color: $white;
-  padding: 20px;
-  text-align: center;
-  width: 100vw;
-  min-height: 30vh;
-  @include flex-center;
-  flex-direction: column;
-  background-color: transparent;
-
-  h2 {
-    color: $black;
-    font-size: 2em;
-    margin-bottom: 20px;
-
-    .cards-piezas {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: flex-start;
-      gap: 20px;
-      width: 100%;
-      flex-wrap: wrap;
-      padding: 10px;
-
-      .card {
-        background-color: #1a1a1a;
-        padding: 20px;
-        border-radius: 10px;
-        width: 200px;
-        box-shadow: 0 4px 8px rgba($black, 0.1);
-
-        h3 {
-          color: $white;
-          font-size: 1.5em;
-
-          p {
-            color: #ccc;
-            font-size: 1em;
-          }
-        }
-      }
-    }
-  }
-}
-
-// Sección de Productos ----------------------------------------
+// ========================================
+// GRID PRODUCTOS / INDUSTRIAS
+// ========================================
 
 .contenedor-productos {
-  margin-bottom: 15px;
-  display: block;
-  border: none;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
 
-  .h2-productos {
-    text-align: center;
-    font-size: 30px;
+.h2-productos {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+}
 
-    .productos-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
-      margin-top: 20px;
-      border: none;
+.parrafo-productos {
+  text-align: center;
+  font-size: 1rem;
+  color: $muted;
+  margin: 0.75rem auto 1.5rem;
+  max-width: 880px;
+  line-height: 1.7;
+}
 
-      @media (min-width: 768px) {
-        grid-template-columns: repeat(3, 1fr);
+.productos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
 
-        .producto {
-          margin: 15px;
-          padding: 15px;
-          text-align: center;
-
-
-          .imagenc {
-            width: 100%;
-            height: auto;
-          }
-        }
-      }
-    }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-// Sección de Industrias ---------------------------------------
-
-.card-industria {
-  position: absolute;
-  color: rgb(0, 0, 0);
+.producto {
+  background-color: $dark-card;
+  border-radius: $radius;
   overflow: hidden;
-  background: none;
-  border: none;
-  border-radius: 10px;
-  transition: transform 0.3s ease-in-out;
+  @include transition(transform 0.3s ease, box-shadow 0.3s ease);
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  h3 {
+    background-color: $primary;
+    color: $dark;
+    padding: 0.65rem 1rem;
+    margin: 0;
+  }
+
+  p {
+    padding: 0.85rem 1rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: $white;
+    margin: 0;
+  }
+
+  a.text-warning {
+    font-weight: 700;
+    text-decoration: none;
+    &:hover { text-decoration: underline; }
+  }
+}
+
+.imagenc {
+  width: 100%;
+  height: 165px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.card-img-top {
+  height: 165px;
+  object-fit: cover;
+  object-position: center;
+}
+
+// ========================================
+// INDUSTRIAS
+// ========================================
+
+.h2-industrias {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
 }
 
 .parrafo-industrias {
   text-align: center;
-  margin-bottom: 20px;
-  font-size: 20px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: $muted;
+  line-height: 1.7;
 }
 
-.h2-industrias {
-  text-align: center;
-  font-size: 30px;
-}
-
-.card-industria:hover {
-  transform: scale(1.05);
-}
-
-.imagen-industria {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-}
-
-
-.card-body {
-  position: absolute;
-  border: none;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 15px;
-}
-
-
-
-
-.btn-learn:hover {
-  background-color: #FFA000;
-}
-
-.btn-learn {
-  background-color: #FFC107;
-  color: black;
-  font-weight: bold;
-}
-
-.card-title {
-  font-weight: bold;
-}
-
-
-// Sección de Servicios -----------------------------------
+// ========================================
+// SERVICIOS
+// ========================================
 
 .contenedor-servicios {
   width: 100%;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 1rem auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  padding: 0 1rem;
 
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-
-    .h2-servicios {
-      font-size: 24px;
-      font-weight: bold;
-      margin-bottom: 10px;
-
-      .parrafo-servicios {
-        font-size: 16px;
-        color: #333;
-        line-height: 1.5;
-        margin-bottom: 20px;
-
-
-      }
-    }
-
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
   }
+}
+
+.h2-servicios {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: $dark;
+}
+
+.parrafo-servicios {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
 }
 
 .tarjeta {
-  background-color: #f8f8f8;
-  padding: 40px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba($black, 0.1);
+  background-color: $light;
+  padding: 2rem;
+  border-radius: $radius;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   text-align: left;
+
+  h2 {
+    color: $dark;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+
+  p { margin-bottom: 1.25rem; }
 }
+
+// ========================================
+// BOTONES
+// ========================================
 
 .btn {
-  background-color: $yellow;
+  background-color: $primary;
+  color: $dark;
   border: none;
-  padding: 14px 20px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 0.65rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: $radius;
   @include transition(background 0.3s ease);
 
-  &:hover {
-    background-color: $yellow-hover;
-  }
+  &:hover { background-color: $primary-dark; }
 }
 
-// Sección de Contacto -------------------------------------------
-
-.container {
-  max-width: 1000px;
-  background: $white;
-  box-shadow: 1px 1px 4px rgba($black, 0.1);
-  border: 1px solid $black;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-  max-width: 1000px;
-  width: 90%;
-  margin: 0 auto;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-img,
-.img-contacto {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
-
-.text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-
-  @media (min-width: 768px) {
-    text-align: left;
-  }
-}
-
-.grid-item {
-  background: $white;
-  width: 100%;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba($black, 0.1);
-}
-
-.button,
-.btn-warning {
-  background: $yellow;
-  color: $black;
-  padding: 10px 16px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 10px;
-  display: inline-block;
-  width: fit-content;
-
-  &:hover {
-    background-color: darken($yellow, 10%);
-    text-decoration: none;
-  }
-}
+// ========================================
+// CONTACTO
+// ========================================
 
 .p-contacto {
   text-align: center;
-  font-size: 1rem;
-  margin: 0;
-  font-family: $heading-font;
+  font-size: 0.95rem;
+  font-family: $font;
+  line-height: 1.6;
+  color: #444;
+  padding: 0.5rem;
 }
 
+// ========================================
+// PIEZAS
+// ========================================
 
+.imagenP {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
 
+  @media (max-width: 768px) { height: 250px; }
+}
 
+// ========================================
+// FOOTER
+// ========================================
 
+footer {
+  background-color: $dark;
+  color: $white;
+  width: 100%;
+  padding: 3rem 0 0;
+  font-size: 0.9rem;
 
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    @media (min-width: 576px) { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 992px) { grid-template-columns: 2fr 1fr 1fr 1fr; }
+  }
+
+  .footer-brand {
+    img {
+      max-height: 55px;
+      width: auto;
+      margin-bottom: 1rem;
+      filter: brightness(0) invert(1);
+    }
+    p { color: #aaa; font-size: 0.875rem; line-height: 1.7; }
+  }
+
+  .footer-col {
+    h5 {
+      color: $primary;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.45rem;
+
+        a {
+          color: #bbb;
+          text-decoration: none;
+          font-size: 0.875rem;
+          @include transition(color 0.25s);
+          &:hover { color: $primary; }
+        }
+      }
+    }
+
+    address, p {
+      font-style: normal;
+      color: #bbb;
+      font-size: 0.875rem;
+      line-height: 1.8;
+      margin: 0;
+    }
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #2A2A2A;
+    padding: 1.25rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: center;
+    width: 100%;
+
+    @media (min-width: 576px) {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+    }
+  }
+
+  .social-icons {
+    display: flex;
+    gap: 0.75rem;
+    margin: 0;
+
+    a {
+      color: #bbb;
+      font-size: 1.1rem;
+      @include transition(color 0.25s);
+      &:hover { color: $primary; }
+    }
+  }
+
+  .footer-text {
+    font-size: 0.825rem;
+    color: #888;
+  }
+}
+
+// ========================================
+// STATS BANNER
+// ========================================
+
+.stats-banner {
+  background-color: $dark;
+  color: $white;
+  padding: 3rem 1rem;
+
+  .stat-item {
+    text-align: center;
+    padding: 1rem;
+
+    h2 {
+      color: $primary;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+  }
+}
+
+// ========================================
+// RESPONSIVE
+// ========================================
+
+@media (max-width: 768px) {
+  body { padding-top: 75px; }
+  .imagen1 { height: 170px; }
+  .imagenc { height: 150px; }
+  .card-img-top { height: 145px; }
+  .contenedor-servicios { padding: 0 0.5rem; }
+}

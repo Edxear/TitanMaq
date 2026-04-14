@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8">
@@ -8,7 +8,7 @@
   <meta name="keywords" content="Mantenimiento, Aspectos, Tecnicas, Procesos, Capacitación">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="/CSS/styles.css">
+  <link rel="stylesheet" href="../CSS/styles.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="shortcut icon" href="../IMG/Favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -20,7 +20,7 @@
     <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html">
-          <img src="../IMG/titanmaq_navbar.png" alt="logo TitanMaq" width="250" height="100">
+          <img src="../IMG/titanmaq_navbar.png" alt="TitanMaq" loading="lazy">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,25 +29,17 @@
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="../views/piezas.html">Piezas</a></li>
-            <li class="nav-item"><a class="nav-link" href="../views/productos.html">Productos</a></li>
-            <li class="nav-item"><a class="nav-link" href="../views/industrias.html">Industrias</a></li>
-            <li class="nav-item"><a class="nav-link active" href="../views/servicios.html">Servicios</a></li>
-            <li class="nav-item"><a class="nav-link" href="../views/contacto.html">Contacto</a></li>
-
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
+              <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Menú
               </a>
               <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
-                <li><a class="dropdown-item" href="../views/piezas.html">Piezas</a></li>
-                <li><a class="dropdown-item" href="../views/productos.html">Productos</a></li>
-                <li><a class="dropdown-item" href="../views/industrias.html">Industrias</a></li>
-                <li><a class="dropdown-item" href="../views/servicios.html">Servicios</a></li>
-                <li><a class="dropdown-item" href="../views/contacto.html">Contacto</a></li>
+                <li><a class="dropdown-item" href="piezas.html">Piezas</a></li>
+                <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                <li><a class="dropdown-item" href="industrias.html">Industrias</a></li>
+                <li><a class="dropdown-item" href="servicios.html">Servicios</a></li>
+                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
               </ul>
             </li>
           </ul>
@@ -62,52 +54,116 @@
   </header>
 
 
-  <div class="container-fluid mt-5 contenedor-imagen">
+  <div class="container-fluid contenedor-imagen mt-2">
     <img class="imagen1" src="../IMG/PagServicios/ImagenServicios.jpg" alt="Imagen de operarios y supervisor">
   </div>
-  <div class="contenedor-servicios mt-4 mb-3">
-    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="tarjeta p-4 shadow bg-light rounded">
-      <h2 class="h2-servicios">Aspectos</h2>
-      <div class="linea">
-        <p class="parrafo-servicios">
-          Necesita la mayor eficiencia del combustible posible, costos de operación mínimos y cada minuto de producción
-          que pueda obtener.
-          Su distribuidor TitanMaq puede ayudarlo a mejorar todos los aspectos de su operación para que su trabajo sea
-          más
-          rápido y eficaz que nunca.
-        </p>
-        <button class="btn">Encontrar Un Distribuidor</button>
-      </div>
+
+  <div class="container-fluid py-4 bg-light">
+    <h2 class="h2-productos text-black bg-warning p-2 text-center" data-aos="fade-down"><strong>Nuestros Servicios</strong></h2>
+    <p class="parrafo-productos mt-3" data-aos="fade-up">Su distribuidor TitanMaq puede ayudarlo a mejorar todos los aspectos de su operación. Ponemos a su disposición el respaldo de un equipo de expertos dedicados a maximizar su productividad.</p>
+  </div>
+
+  <div class="contenedor-servicios mt-4 mb-3 px-3">
+    <div data-aos="fade-up" class="tarjeta shadow bg-light">
+      <h2 class="h2-servicios"><i class="fas fa-tools text-warning me-2"></i>Mantenimiento y Respaldo</h2>
+      <p class="parrafo-servicios">Ponemos a nuestros expertos a su disposición para ofrecerle asesoramiento técnico y conocimiento. Desde inspecciones preventivas hasta reparaciones de emergencia, cubrimos todas sus necesidades.</p>
+      <a href="contacto.html" class="btn">Solicitar Servicio</a>
     </div>
 
-    <div data-aos="fade-up" data-aos-anchor-placement="center-bottom" class="tarjeta p-4 shadow bg-light rounded">
-      <h2 class="h2-servicios">Mantenimiento y Respaldo</h2>
-      <div class="linea">
-        <p class="parrafo-servicios">
-          Ponemos a nuestros expertos a trabajar para ofrecerle asesoramiento y conocimiento.
-        </p>
-        <button class="btn mb-5">Obtener Más Información</button>
+    <div data-aos="fade-up" class="tarjeta shadow bg-light">
+      <h2 class="h2-servicios"><i class="fas fa-tachometer-alt text-warning me-2"></i>Eficiencia Operativa</h2>
+      <p class="parrafo-servicios">Necesita la mayor eficiencia del combustible posible, costos de operación mínimos y cada minuto de producción que pueda obtener. Nuestros expertos analizan su operación y proponen mejoras concretas.</p>
+      <a href="contacto.html" class="btn">Encontrar Un Distribuidor</a>
+    </div>
+
+    <div data-aos="fade-up" class="tarjeta shadow bg-light">
+      <h2 class="h2-servicios"><i class="fas fa-graduation-cap text-warning me-2"></i>Capacitación de Operadores</h2>
+      <p class="parrafo-servicios">TitanMaq ofrece programas de capacitación para operadores de equipo pesado, técnicos de servicio y líderes. Opciones presenciales, aprendizaje a pedido y simuladores de última generación.</p>
+      <a href="contacto.html" class="btn">Ver Programas</a>
+    </div>
+
+    <div data-aos="fade-up" class="tarjeta shadow bg-light">
+      <h2 class="h2-servicios"><i class="fas fa-satellite-dish text-warning me-2"></i>Tecnología & Monitoreo</h2>
+      <p class="parrafo-servicios">Conecte sus máquinas a nuestra plataforma de telemetría. Monitoree en tiempo real ubicación, horas de uso, alertas de mantenimiento y rendimiento de su flota desde cualquier dispositivo.</p>
+      <a href="contacto.html" class="btn">Conocer Más</a>
+    </div>
+
+    <div data-aos="fade-up" class="tarjeta shadow bg-light">
+      <h2 class="h2-servicios"><i class="fas fa-clock text-warning me-2"></i>Soporte 24/7</h2>
+      <p class="parrafo-servicios">Nuestro centro de atención técnica está disponible las 24 horas, los 7 días de la semana. Ante cualquier falla o emergencia, un especialista TitanMaq estará listo para asistirle de inmediato.</p>
+      <a href="contacto.html" class="btn">Contactar Soporte</a>
+    </div>
+
+    <div data-aos="fade-up" class="tarjeta shadow bg-light">
+      <h2 class="h2-servicios"><i class="fas fa-recycle text-warning me-2"></i>Repuestos Originales</h2>
+      <p class="parrafo-servicios">Utilizamos exclusivamente repuestos originales TitanMaq para garantizar el rendimiento y la vida útil de su equipo. Todas las piezas están cubiertas por una garantía de 12 meses contra defectos de fabricación.</p>
+      <a href="piezas.html" class="btn">Ver Piezas</a>
+    </div>
+  </div>
+
+  <div class="stats-banner mt-3 mb-0" data-aos="fade-up">
+    <div class="container">
+      <div class="row g-4 justify-content-center">
+        <div class="col-6 col-md-3 stat-item">
+          <h2>2.700+</h2>
+          <p>Sucursales mundiales</p>
+        </div>
+        <div class="col-6 col-md-3 stat-item">
+          <h2>190+</h2>
+          <p>Países con presencia</p>
+        </div>
+        <div class="col-6 col-md-3 stat-item">
+          <h2>24/7</h2>
+          <p>Soporte técnico</p>
+        </div>
+        <div class="col-6 col-md-3 stat-item">
+          <h2>100</h2>
+          <p>Años de trayectoria</p>
+        </div>
       </div>
     </div>
   </div>
 
   <footer>
-    <div class="social-icons">
-      <a href="https://facebook.com" target="_blank" aria-label="Facebook">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="https://twitter.com" target="_blank" aria-label="Twitter">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../IMG/titanmaq_navbar.png" alt="TitanMaq Logo">
+        <p>Distribuidor líder de maquinaria pesada con presencia en más de 190 países y 2.700 sucursales a nivel mundial.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Navegación</h5>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="piezas.html">Piezas</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="industrias.html">Industrias</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contacto</h5>
+        <address>
+          Av. Industrial 1500<br>
+          Gualeguaychú, Entre Ríos<br>
+          Argentina<br><br>
+          Tel: +54 (3446) 000-000<br>
+          info@titanmaq.com
+        </address>
+      </div>
+      <div class="footer-col">
+        <h5>Horario de Atención</h5>
+        <p>Lun – Vie: 8:00 – 18:00<br>Sábados: 8:00 – 12:00<br>Domingos: Cerrado</p>
+      </div>
     </div>
-    <div class="footer-text">
-      © 2025 TitanMaq. Todos los derechos reservados.
+    <div class="footer-bottom">
+      <div class="social-icons">
+        <a href="https://facebook.com/titanmaq" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/titanmaq" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://linkedin.com/company/titanmaq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+      <p class="footer-text">© 2025 TitanMaq. Todos los derechos reservados.</p>
     </div>
   </footer>
 
