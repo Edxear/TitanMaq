@@ -12,6 +12,9 @@ $white:        #FFFFFF;
 $muted:        #6C757D;
 $radius:       8px;
 $font:         'Segoe UI', Arial, sans-serif;
+$space-section: clamp(1.25rem, 2vw, 2rem);
+$text-title: clamp(1.2rem, 1.8vw, 1.7rem);
+$text-body: clamp(0.96rem, 1vw, 1.03rem);
 
 // --- Mixins ---
 @mixin transition($args...) { transition: $args; }
@@ -27,6 +30,7 @@ body {
   font-family: $font;
   color: #212529;
   line-height: 1.55;
+  font-size: $text-body;
   overflow-x: hidden;
   margin: 0;
   padding-top: 82px;
@@ -39,6 +43,11 @@ main { width: 100%; }
 h1 { font-family: $font; font-size: clamp(1.75rem, 4vw, 3rem); margin: 0; }
 h2 { font-family: $font; font-size: clamp(1.4rem, 2.5vw, 2rem); margin: 0; }
 h3 { font-family: $font; font-size: clamp(1rem, 2vw, 1.35rem); margin: 0; }
+
+.content-section {
+  margin-top: $space-section;
+  margin-bottom: $space-section;
+}
 
 a { text-underline-offset: 2px; }
 
@@ -109,7 +118,7 @@ header { width: 100%; }
 
 .h2-productos {
   text-align: center;
-  font-size: 1.75rem;
+  font-size: $text-title;
   font-weight: 700;
 }
 
@@ -236,7 +245,7 @@ header { width: 100%; }
 
 .parrafo-servicios {
   font-size: 1rem;
-  color: #444;
+  color: #415261;
   line-height: 1.6;
   margin-bottom: 1.25rem;
 }
@@ -266,6 +275,7 @@ header { width: 100%; }
   color: $dark;
   border: none;
   padding: 0.65rem 1.25rem;
+  min-height: 44px;
   font-size: 1rem;
   font-weight: 700;
   cursor: pointer;

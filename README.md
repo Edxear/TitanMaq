@@ -28,3 +28,10 @@
 
 <p> <img align="centro" src="https://github-readme-stats.vercel.app/api?username=edxear&show_icons=true&locale=es" alt="edxear" /></p>
 
+## Flujo del proyecto TitanMaq
+
+- Instalar dependencias: `npm install`
+- Compilar estilos: `npm run build:css`
+- Modo observacion SCSS: `npm run watch:css`
+- Checklist de control visual y funcional: `docs/QA_CHECKLIST.md`
+
