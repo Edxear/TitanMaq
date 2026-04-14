@@ -316,6 +316,102 @@ header { width: 100%; }
   }
 }
 
+.quick-links-card {
+  .card-body {
+    padding: 1.05rem 1.1rem;
+  }
+}
+
+.quick-links {
+  margin-top: 0.45rem;
+
+  li + li {
+    margin-top: 0.45rem;
+  }
+
+  a {
+    color: #0A58CA;
+    font-weight: 700;
+    text-decoration: none;
+
+    &:hover {
+      color: #084298;
+      text-decoration: underline;
+    }
+  }
+}
+
+.faq-list {
+  margin: 0;
+  padding: 0;
+}
+
+.faq-item {
+  border: 1px solid #E5E8EC;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
+
+  .accordion-button {
+    color: #1F2D3A;
+    font-weight: 700;
+    background-color: $white;
+    box-shadow: none;
+    padding: 1rem 1.15rem;
+
+    &:not(.collapsed) {
+      background-color: #F4F7FA;
+      color: #172535;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .accordion-body {
+    color: #425364;
+    line-height: 1.7;
+    background: $white;
+
+    a {
+      color: #0A58CA;
+      font-weight: 700;
+      text-decoration: none;
+
+      &:hover {
+        color: #084298;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.faq-symbol {
+  margin-left: auto;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  border: 1px solid #CDD5DD;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0A58CA;
+  background: $white;
+  flex-shrink: 0;
+
+  &::before {
+    content: "+";
+    font-size: 1.1rem;
+    line-height: 1;
+  }
+}
+
+.faq-item .accordion-button:not(.collapsed) .faq-symbol::before {
+  content: "-";
+}
+
 // ========================================
 // PIEZAS
 // ========================================
