@@ -103,10 +103,20 @@ header { width: 100%; }
 .parrafo-productos {
   text-align: center;
   font-size: 1rem;
-  color: #6C757D;
-  margin: 0.75rem auto 1.5rem;
-  max-width: 880px;
+  color: #47596B;
+  margin: 0.75rem auto 1.15rem;
+  max-width: 940px;
   line-height: 1.7;
+  font-weight: 600;
+  background: #EEF2F5;
+  border-left: 4px solid #FFC107;
+  border-radius: 6px;
+  padding: 0.85rem 1rem;
+}
+
+.parrafo-productos strong {
+  color: inherit;
+  font-weight: 600;
 }
 
 .productos-grid {
@@ -182,7 +192,7 @@ header { width: 100%; }
   text-align: center;
   margin-bottom: 1.5rem;
   font-size: 1rem;
-  color: #6C757D;
+  color: #47596B;
   line-height: 1.7;
 }
 
@@ -254,8 +264,39 @@ header { width: 100%; }
   font-size: 0.95rem;
   font-family: 'Segoe UI', Arial, sans-serif;
   line-height: 1.6;
-  color: #444;
+  color: #3F4D5A;
+  font-weight: 500;
   padding: 0.5rem;
+}
+
+.point-card {
+  border: 1px solid #E5E8EC;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
+}
+
+.point-card .card-body {
+  padding: 1.1rem 1.15rem;
+}
+
+.point-card .card-title {
+  color: #1F2D3A;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+.point-card .card-text {
+  color: #425364;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.point-card a {
+  color: #0A58CA;
+}
+
+.point-card a:hover {
+  color: #084298;
 }
 
 /* Piezas */
@@ -300,7 +341,7 @@ footer .footer-brand img {
   max-height: 55px;
   width: auto;
   margin-bottom: 1rem;
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 footer .footer-brand p {
