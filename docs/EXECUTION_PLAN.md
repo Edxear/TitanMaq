@@ -15,12 +15,17 @@ Dejar el sitio visualmente consistente, tecnicamente mantenible y listo para esc
 9. Hardening de repositorio y despliegue
 
 ## Estado de avance
-- Paso 1: iniciado (sistema visual base reforzado)
-- Paso 2: iniciado (normalizacion de espacios en progreso)
-- Paso 3: iniciado (bootstrap de componentizacion creado)
-- Paso 4: iniciado (pipeline SCSS->CSS configurado)
-- Paso 5: iniciado (optimizacion de carga en imagenes clave)
-- Paso 6: iniciado (autocompletado y mejoras de formularios)
-- Paso 7: iniciado (metadatos OG en vistas principales)
-- Paso 8: iniciado (checklist QA creado)
-- Paso 9: iniciado (gitignore y scripts de repo saneados)
+- Paso 1: completado (sistema visual base unificado)
+- Paso 2: completado (espaciado y layout homogenizados en vistas principales)
+- Paso 3: completado (header/footer compartidos implementados con inyeccion por templates)
+- Paso 4: completado (pipeline SCSS->CSS configurado y operativo)
+- Paso 5: completado (variantes WebP generadas e integradas en heroes criticos)
+- Paso 6: completado (mejoras de accesibilidad en formularios y navegacion activa)
+- Paso 7: completado (metadatos OG/Twitter en vistas principales e internas)
+- Paso 8: iniciado (QA automatica base ejecutada, pendiente chequeo visual final por viewport)
+- Paso 9: completado (repo saneado: ignore rules y scripts)
+
+## Siguiente bloque recomendado
+- Ejecutar QA visual completo en breakpoints definidos (Paso 8)
+- Optimizar peso de imagenes grandes para mejorar LCP (Paso 5)
+- Reforzar script de layout para fallback sin fetch en entornos estaticos restrictivos

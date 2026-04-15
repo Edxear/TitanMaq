@@ -20,50 +20,12 @@
     <title>Productos</title>
 </head>
 
-<body>
+<body data-root="../" data-page="productos">
+  <div id="site-header"></div>
 
-    <header>
-        <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html">
-                    <img src="../IMG/titanmaq_navbar.png" alt="TitanMaq" loading="lazy">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Menú
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="../index.html">Inicio</a></li>
-                                <li><a class="dropdown-item" href="piezas.html">Piezas</a></li>
-                                <li><a class="dropdown-item" href="productos.html">Productos</a></li>
-                                <li><a class="dropdown-item" href="industrias.html">Industrias</a></li>
-                                <li><a class="dropdown-item" href="servicios.html">Servicios</a></li>
-                                <li><a class="dropdown-item" href="distribuidor.html">Distribuidor</a></li>
-                                <li><a class="dropdown-item" href="capacitacion.html">Capacitacion</a></li>
-                                <li><a class="dropdown-item" href="tecnologia.html">Tecnologia</a></li>
-                                <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
-                        <button class="btn text-black bg-warning p-2 mt-1 btn-outline-success" type="submit">Buscar</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
-    </header>
+    
  
-    <div class="contenedor-productos mt-3 p-3 shadow bg-light rounded">
+    <div class="contenedor-productos content-section p-3 shadow bg-light rounded">
         <h2 class="h2-productos text-black bg-warning p-2 mt-2" data-aos="fade-down"><strong>Camiones
                 Articulados</strong></h2>
         <p class="parrafo-productos" data-aos="fade-up"><strong>Todos los equipos incluyen asesoría de configuración, inspección previa a la entrega y plan recomendado de mantenimiento para maximizar vida útil y rendimiento en operación real.</strong></p>
@@ -164,51 +126,11 @@
         </div>
     </div>
     
-    <footer>
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="../IMG/titanmaq_navbar.png" alt="TitanMaq Logo">
-                    <p>Distribuidor líder de maquinaria pesada con presencia en más de 190 países y 2.700 sucursales a nivel mundial.</p>
-                </div>
-                <div class="footer-col">
-                    <h5>Navegación</h5>
-                    <ul>
-                        <li><a href="../index.html">Inicio</a></li>
-                        <li><a href="piezas.html">Piezas</a></li>
-                        <li><a href="productos.html">Productos</a></li>
-                        <li><a href="industrias.html">Industrias</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h5>Contacto</h5>
-                    <address>
-                        Av. Industrial 1500<br>
-                        Gualeguaychú, Entre Ríos<br>
-                        Argentina<br><br>
-                        Tel: +54 (3446) 000-000<br>
-                        info@titanmaq.com
-                    </address>
-                </div>
-                <div class="footer-col">
-                    <h5>Horario de Atención</h5>
-                    <p>Lun – Vie: 8:00 – 18:00<br>Sábados: 8:00 – 12:00<br>Domingos: Cerrado</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="social-icons">
-                    <a href="https://facebook.com/titanmaq" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com/titanmaq" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://linkedin.com/company/titanmaq" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-                <p class="footer-text">© 2025 TitanMaq. Todos los derechos reservados.</p>
-            </div>
-      </footer>
+      <div id="site-footer"></div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      <script src="../js/layout-components.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -218,3 +140,4 @@
 </body>
 
 </html>
+

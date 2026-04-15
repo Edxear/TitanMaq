@@ -91,6 +91,10 @@ header {
   padding: 0;
 }
 
+.hero-picture {
+  display: block;
+}
+
 .imagen1 {
   width: 100%;
   height: clamp(170px, 26vw, 330px);
