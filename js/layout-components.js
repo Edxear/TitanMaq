@@ -1,6 +1,7 @@
 // Inject shared layout templates and mark active nav item per page.
 (function initLayoutComponents() {
   const root = document.body?.dataset?.root || './';
+  const page = document.body?.dataset?.page || '';
   const headerHost = document.getElementById('site-header');
   const footerHost = document.getElementById('site-footer');
 
@@ -18,11 +19,42 @@
     }
   };
 
+  const fallbackHeader = `
+    <header>
+      <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body fixed-top" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="${root}index.html">
+            <img src="${root}IMG/titanmaq_navbar.png" alt="TitanMaq" loading="lazy">
+          </a>
+          <div class="navbar-nav">
+            <a class="nav-link text-white" href="${root}index.html">Inicio</a>
+            <a class="nav-link text-white" href="${root}views/servicios.html">Servicios</a>
+            <a class="nav-link text-white" href="${root}views/contacto.html">Contacto</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  `;
+
+  const fallbackFooter = `
+    <footer>
+      <div class="footer-bottom">
+        <p class="footer-text">© 2025 TitanMaq. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  `;
+
   Promise.all([
     loadTemplate(headerHost, `${root}partials/header.html`),
     loadTemplate(footerHost, `${root}partials/footer.html`),
   ]).then(() => {
-    const page = document.body?.dataset?.page;
+    if (headerHost && !headerHost.innerHTML.trim()) {
+      headerHost.innerHTML = fallbackHeader;
+    }
+    if (footerHost && !footerHost.innerHTML.trim()) {
+      footerHost.innerHTML = fallbackFooter;
+    }
+
     if (!page) return;
     const active = document.querySelector(`.dropdown-menu a[data-page="${page}"]`);
     if (active) {

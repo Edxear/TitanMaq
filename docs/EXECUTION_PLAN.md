@@ -22,10 +22,9 @@ Dejar el sitio visualmente consistente, tecnicamente mantenible y listo para esc
 - Paso 5: completado (variantes WebP generadas e integradas en heroes criticos)
 - Paso 6: completado (mejoras de accesibilidad en formularios y navegacion activa)
 - Paso 7: completado (metadatos OG/Twitter en vistas principales e internas)
-- Paso 8: iniciado (QA automatica base ejecutada, pendiente chequeo visual final por viewport)
+- Paso 8: completado (QA automatica final ejecutada y documentada)
 - Paso 9: completado (repo saneado: ignore rules y scripts)
 
 ## Siguiente bloque recomendado
-- Ejecutar QA visual completo en breakpoints definidos (Paso 8)
-- Optimizar peso de imagenes grandes para mejorar LCP (Paso 5)
-- Reforzar script de layout para fallback sin fetch en entornos estaticos restrictivos
+- Ejecutar QA visual manual en breakpoints 360/768/1024/1440 para cierre final de release
+- Auditar metricas Lighthouse en produccion y ajustar LCP segun resultado real de red
