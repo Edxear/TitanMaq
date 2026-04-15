@@ -12,6 +12,9 @@
         <div class="titan-chatbot-header">
           <span>Asistente TitanMaq</span>
           <span class="titan-chatbot-tone-badge">Modo comercial</span>
+          <button class="titan-chatbot-close" type="button" aria-label="Cerrar chat TitanMaq">
+            <i class="fas fa-times" aria-hidden="true"></i>
+          </button>
         </div>
         <div class="titan-chatbot-tools">
           <button class="titan-tone-btn active" type="button" data-tone="comercial">Comercial</button>
@@ -50,6 +53,7 @@
     const form = host.querySelector('.titan-chatbot-form');
     const input = host.querySelector('.titan-chatbot-input');
     const toneBadge = host.querySelector('.titan-chatbot-tone-badge');
+    const closeButton = host.querySelector('.titan-chatbot-close');
     const toneButtons = host.querySelectorAll('.titan-tone-btn');
     const quickButtons = host.querySelectorAll('.titan-quick-btn');
 
@@ -168,12 +172,20 @@
       const open = panel.hasAttribute('hidden');
       if (open) {
         panel.removeAttribute('hidden');
+        host.classList.add('is-open');
         button.setAttribute('aria-expanded', 'true');
         input.focus();
       } else {
         panel.setAttribute('hidden', '');
+        host.classList.remove('is-open');
         button.setAttribute('aria-expanded', 'false');
       }
+    });
+
+    closeButton.addEventListener('click', () => {
+      panel.setAttribute('hidden', '');
+      host.classList.remove('is-open');
+      button.setAttribute('aria-expanded', 'false');
     });
 
     form.addEventListener('submit', (e) => {
