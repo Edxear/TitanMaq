@@ -483,6 +483,60 @@ header {
   color: #1F2D3A;
   font-weight: 700;
   padding: 0.7rem 0.85rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titan-chatbot-tone-badge {
+  font-size: 0.76rem;
+  background: #FFE8A4;
+  color: #29384A;
+  border-radius: 999px;
+  padding: 0.2rem 0.55rem;
+}
+
+.titan-chatbot-tools {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.6rem 0.7rem 0;
+}
+
+.titan-tone-btn {
+  border: 1px solid #CCD8E4;
+  border-radius: 999px;
+  padding: 0.28rem 0.65rem;
+  font-size: 0.8rem;
+  background: #FFFFFF;
+  color: #35506D;
+}
+.titan-tone-btn.active {
+  border-color: #0A58CA;
+  background: #EAF2FD;
+  color: #0A58CA;
+  font-weight: 700;
+}
+
+.titan-chatbot-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  padding: 0.6rem 0.7rem 0;
+}
+
+.titan-quick-btn {
+  border: 1px solid #CDD9E6;
+  background: #F9FBFD;
+  border-radius: 999px;
+  color: #35506D;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.6rem;
+}
+.titan-quick-btn:hover {
+  border-color: #0A58CA;
+  color: #0A58CA;
+  background: #EEF5FF;
 }
 
 .titan-chatbot-messages {
