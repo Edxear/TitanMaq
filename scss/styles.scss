@@ -82,7 +82,8 @@ header { width: 100%; }
   }
 
   .navbar-nav {
-    margin-left: 1.1rem;
+    margin-left: 1.8rem;
+    gap: 0.25rem;
   }
 }
 
@@ -103,6 +104,12 @@ header { width: 100%; }
       margin-top: 0.55rem;
     }
   }
+}
+
+#site-header + .container-fluid.contenedor-imagen,
+#site-header + .content-section,
+#site-header + main.content-section {
+  margin-top: 0.85rem !important;
 }
 
 // ========================================
@@ -140,6 +147,12 @@ header { width: 100%; }
   text-align: center;
   font-size: $text-title;
   font-weight: 700;
+  line-height: 1.25;
+}
+
+.h2-productos.bg-warning {
+  margin-top: 0 !important;
+  margin-bottom: 0.85rem !important;
 }
 
 .parrafo-productos {
@@ -514,13 +527,23 @@ header { width: 100%; }
 
 .titan-chatbot-toggle {
   border: none;
-  border-radius: 999px;
-  min-height: 46px;
-  padding: 0.6rem 1rem;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  min-height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
   background: $primary;
   color: $dark;
   font-weight: 700;
   box-shadow: 0 8px 20px rgba(17, 17, 17, 0.25);
+
+  i {
+    font-size: 1.35rem;
+    line-height: 1;
+  }
 }
 
 .titan-chatbot-panel {

@@ -5,7 +5,9 @@
     host.setAttribute('aria-label', 'Chat de ayuda TitanMaq');
 
     host.innerHTML = `
-      <button class="titan-chatbot-toggle" type="button" aria-expanded="false">Chat TitanMaq</button>
+      <button class="titan-chatbot-toggle" type="button" aria-expanded="false" aria-label="Abrir chat TitanMaq">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+      </button>
       <div class="titan-chatbot-panel" hidden>
         <div class="titan-chatbot-header">
           <span>Asistente TitanMaq</span>
