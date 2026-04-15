@@ -73,7 +73,7 @@
     }
 
     if (!page) return;
-    const active = document.querySelector(`.dropdown-menu a[data-page="${page}"]`);
+    const active = document.querySelector(`a[data-page="${page}"]`);
     if (active) {
       active.setAttribute('aria-current', 'page');
       active.classList.add('active');
