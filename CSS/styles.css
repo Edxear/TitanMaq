@@ -141,6 +141,35 @@ header {
 
 .hero-picture {
   display: block;
+  position: relative;
+}
+
+.hero-picture.brand-mask::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 auto;
+  width: clamp(130px, 22vw, 220px);
+  height: clamp(54px, 9vw, 84px);
+  background: linear-gradient(135deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.78) 74%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-picture.brand-mask::after {
+  content: "TITANMAQ";
+  position: absolute;
+  right: 0.7rem;
+  bottom: 0.55rem;
+  background: rgba(17, 17, 17, 0.82);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.55);
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.2rem 0.45rem;
+  pointer-events: none;
+  z-index: 3;
 }
 
 .imagen1 {
@@ -149,6 +178,7 @@ header {
   object-fit: cover;
   object-position: center;
   display: block;
+  filter: contrast(1.02) saturate(0.9);
 }
 
 .contenedor-productos {
@@ -216,6 +246,7 @@ main.content-section,
 }
 
 .producto {
+  position: relative;
   background: #FFFFFF;
   border: 1px solid #DCE2E8;
   border-top: 4px solid #FFC107;
@@ -271,6 +302,33 @@ main.content-section,
   background: #EFF5FD;
   color: #084298;
 }
+.producto::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 42%;
+  height: 165px;
+  background: linear-gradient(135deg, rgba(17, 17, 17, 0) 0%, rgba(17, 17, 17, 0.72) 88%);
+  pointer-events: none;
+  z-index: 1;
+}
+.producto::after {
+  content: "TITANMAQ";
+  position: absolute;
+  top: 132px;
+  right: 0.65rem;
+  background: rgba(17, 17, 17, 0.85);
+  color: #FFC107;
+  border: 1px solid rgba(255, 193, 7, 0.45);
+  border-radius: 4px;
+  font-size: 0.66rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  padding: 0.12rem 0.4rem;
+  pointer-events: none;
+  z-index: 2;
+}
 
 /* Legacy blocks that still use dark/yellow utility classes are normalized to card style. */
 .p-3.bg-black {
@@ -320,12 +378,29 @@ main.content-section,
   text-decoration: underline;
 }
 
+.home-intro-grid {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-intro-card p {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+.home-intro-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
 .imagenc {
   width: 100%;
   height: 165px;
   object-fit: cover;
   object-position: center;
   display: block;
+  filter: contrast(1.03) saturate(0.86);
 }
 
 .card-img-top {
