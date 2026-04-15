@@ -26,7 +26,7 @@
           <a class="navbar-brand" href="${root}index.html">
             <img src="${root}IMG/titanmaq_navbar.png" alt="TitanMaq" loading="lazy">
           </a>
-          <div class="navbar-nav">
+          <div class="navbar-nav ms-3">
             <a class="nav-link text-white" href="${root}index.html">Inicio</a>
             <a class="nav-link text-white" href="${root}views/servicios.html">Servicios</a>
             <a class="nav-link text-white" href="${root}views/contacto.html">Contacto</a>
@@ -43,6 +43,23 @@
       </div>
     </footer>
   `;
+
+  const loadChatbot = () => {
+    if (window.initTitanChatbot) {
+      window.initTitanChatbot(root);
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `${root}js/chatbot.js`;
+    script.async = true;
+    script.onload = () => {
+      if (window.initTitanChatbot) {
+        window.initTitanChatbot(root);
+      }
+    };
+    document.body.appendChild(script);
+  };
 
   Promise.all([
     loadTemplate(headerHost, `${root}partials/header.html`),
@@ -61,5 +78,7 @@
       active.setAttribute('aria-current', 'page');
       active.classList.add('active');
     }
+
+    loadChatbot();
   });
 })();

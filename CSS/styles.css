@@ -70,19 +70,29 @@ header {
   width: 100%;
 }
 
+.navbar .container-fluid {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.navbar .navbar-nav {
+  margin-left: 1.1rem;
+}
+
 .navbar-brand img {
   max-height: 58px;
   width: auto;
 }
 
-.navbar .d-flex {
-  width: min(100%, 320px);
-}
-
 @media (max-width: 991px) {
-  .navbar .d-flex {
-    width: 100%;
-    margin-top: 0.75rem;
+  .navbar .container-fluid {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+  .navbar .navbar-nav {
+    margin-left: 0;
+    margin-top: 0.55rem;
   }
 }
 .contenedor-imagen {
@@ -145,34 +155,90 @@ header {
 }
 
 .producto {
-  background-color: #1C1C1C;
-  border-radius: 8px;
+  background: #FFFFFF;
+  border: 1px solid #E5E8EC;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 .producto:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(17, 17, 17, 0.16);
 }
 .producto h3 {
-  background-color: #FFC107;
-  color: #111111;
-  padding: 0.65rem 1rem;
+  background: transparent;
+  color: #1F2D3A;
+  padding: 0.85rem 1rem 0.35rem;
   margin: 0;
+  font-size: 1.28rem;
 }
 .producto p {
-  padding: 0.85rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.25rem 1rem 1rem;
+  font-size: 0.98rem;
   line-height: 1.6;
-  color: #FFFFFF;
+  color: #425364;
   margin: 0;
   overflow-wrap: anywhere;
+  text-align: left;
 }
+.producto a,
 .producto a.text-warning {
+  color: #0A58CA !important;
   font-weight: 700;
   text-decoration: none;
 }
+.producto a:hover,
 .producto a.text-warning:hover {
+  color: #084298 !important;
+  text-decoration: underline;
+}
+.producto .btn {
+  margin-top: 0.55rem;
+  background: transparent;
+  color: #0A58CA;
+  border: 1px solid #C9D9EF;
+  padding: 0.45rem 0.8rem;
+  min-height: 38px;
+}
+.producto .btn:hover {
+  background: #EFF5FD;
+  color: #084298;
+}
+
+/* Legacy blocks that still use dark/yellow utility classes are normalized to card style. */
+.p-3.bg-black {
+  background: #FFFFFF !important;
+  border: 1px solid #E5E8EC;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.08);
+}
+.p-3.bg-black h3,
+.p-3.bg-black h3.text-black,
+.p-3.bg-black h3.bg-warning {
+  background: transparent !important;
+  color: #1F2D3A !important;
+  padding: 0 0 0.45rem !important;
+  margin: 0 !important;
+}
+.p-3.bg-black p,
+.p-3.bg-black p.text-white,
+.p-3.bg-black p.text-warning,
+.p-3.bg-black p.text-black,
+.p-3.bg-black p.bg-warning,
+.p-3.bg-black li {
+  background: transparent !important;
+  color: #425364 !important;
+}
+.p-3.bg-black a,
+.p-3.bg-black a.text-warning {
+  color: #0A58CA !important;
+  text-decoration: none;
+  font-weight: 700;
+}
+.p-3.bg-black a:hover,
+.p-3.bg-black a.text-warning:hover {
+  color: #084298 !important;
   text-decoration: underline;
 }
 
@@ -384,6 +450,95 @@ header {
   content: "-";
 }
 
+.titan-chatbot {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1200;
+}
+
+.titan-chatbot-toggle {
+  border: none;
+  border-radius: 999px;
+  min-height: 46px;
+  padding: 0.6rem 1rem;
+  background: #FFC107;
+  color: #111111;
+  font-weight: 700;
+  box-shadow: 0 8px 20px rgba(17, 17, 17, 0.25);
+}
+
+.titan-chatbot-panel {
+  width: min(92vw, 340px);
+  margin-top: 0.5rem;
+  border: 1px solid #D8E0E8;
+  border-radius: 12px;
+  background: #FFFFFF;
+  box-shadow: 0 16px 34px rgba(17, 17, 17, 0.22);
+  overflow: hidden;
+}
+
+.titan-chatbot-header {
+  background: #F4F7FA;
+  color: #1F2D3A;
+  font-weight: 700;
+  padding: 0.7rem 0.85rem;
+}
+
+.titan-chatbot-messages {
+  max-height: 260px;
+  overflow: auto;
+  padding: 0.75rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.titan-chat-msg {
+  border-radius: 10px;
+  padding: 0.55rem 0.65rem;
+  font-size: 0.93rem;
+  line-height: 1.45;
+}
+
+.titan-chat-msg.bot {
+  background: #EEF2F5;
+  color: #334355;
+}
+
+.titan-chat-msg.user {
+  background: #FFE79A;
+  color: #1F2D3A;
+}
+
+.titan-chatbot-form {
+  display: flex;
+  gap: 0.45rem;
+  padding: 0.7rem;
+  border-top: 1px solid #E7EDF3;
+}
+
+.titan-chatbot-input {
+  flex: 1;
+  border: 1px solid #CDD5DD;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+}
+
+.titan-chatbot-send {
+  border: none;
+  border-radius: 8px;
+  background: #0A58CA;
+  color: #FFFFFF;
+  font-weight: 700;
+  min-width: 74px;
+}
+
+@media (max-width: 768px) {
+  .titan-chatbot {
+    right: 0.7rem;
+    bottom: 0.7rem;
+  }
+}
 .imagenP {
   width: 100%;
   height: 400px;
